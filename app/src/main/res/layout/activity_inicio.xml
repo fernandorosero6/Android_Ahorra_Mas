@@ -47,7 +47,6 @@
         android:layout_marginStart="36dp"
         android:layout_marginTop="124dp"
         android:text="Contadores"
-        app:layout_constraintEnd_toEndOf=""
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/IV_FotoInicio" />
 
@@ -83,6 +82,5 @@
         android:layout_marginBottom="16dp"
         android:text="Historial"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintBottom_toStartOf=""
         app:layout_constraintEnd_toEndOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>
