@@ -16,8 +16,7 @@
 
         <activity
             android:name=".LoginActivity"
-            android:exported="false" />
-        <!-- SplashActivity -->
+            android:exported="false" /> <!-- SplashActivity -->
         <activity
             android:name=".MainActivity"
             android:exported="true"

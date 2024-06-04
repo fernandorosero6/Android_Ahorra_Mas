@@ -6,5 +6,6 @@
     <color name="Text_Color">#585355</color> <!-- Color para texto en la app -->
     <color name="Icon_Color">#134A83</color> <!-- Color para los iconos como daños -->
     <color name="BackgroundText_Color">#E7ECEF</color> <!-- Fondo para la celdas de texto donde el usuario relle informacion -->
+    <color name="AzulClaroLogo_Color">#A3CEF1</color> <!-- Fondo para la celdas de texto donde el usuario relle informacion -->
 
 </resources>
