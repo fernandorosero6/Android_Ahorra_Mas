@@ -1,9 +1,3 @@
 <resources>
     <string name="app_name">Ahorra+</string>
-    <string-array name="options_array">
-        <item>Opción 1</item>
-        <item>Opción 2</item>
-        <item>Opción 3</item>
-    </string-array>
-
 </resources>

@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".RegistroActivity">
+
+
+    <TextView
+        android:id="@+id/TXV_CreaTuCuenta"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="64dp"
+        android:text="CREA TU CUENTA"
+        android:textColor="@color/AzulClaroLogo_Color"
+        android:textSize="35dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/EDT_Registro_nombre"
+        style="@style/RoundedEditText"
+        android:layout_width="250dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="68dp"
+        android:padding="10dp"
+        android:textColor="@color/Text_Color"
+        android:text="Nombre"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/TXV_CreaTuCuenta" />
+
+    <EditText
+        android:id="@+id/EDT_Registro_Apellido"
+        style="@style/RoundedEditText"
+        android:layout_width="250dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="68dp"
+        android:padding="10dp"
+        android:textColor="@color/Text_Color"
+        android:text="Apellido"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/EDT_Registro_nombre"/>
+
+    <EditText
+        android:id="@+id/EDT_Registro_Documento"
+        style="@style/RoundedEditText"
+        android:layout_width="250dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="68dp"
+        android:padding="10dp"
+        android:textColor="@color/Text_Color"
+        android:text="Documento de Identidad"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/EDT_Registro_Apellido"/>
+
+    <EditText
+        android:id="@+id/EDT_Registro_Email"
+        style="@style/RoundedEditText"
+        android:layout_width="250dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="68dp"
+        android:padding="10dp"
+        android:textColor="@color/Text_Color"
+        android:text="Email"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/EDT_Registro_Documento"/>
+
+    <EditText
+        android:id="@+id/EDT_Registro_Contraseña"
+        style="@style/RoundedEditText"
+        android:layout_width="250dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="68dp"
+        android:padding="10dp"
+        android:textColor="@color/Text_Color"
+        android:text="Constraseña"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/EDT_Registro_Email"/>
+
+    <EditText
+        android:id="@+id/EDT_Registro_ContraseñaConfirmacion"
+        style="@style/RoundedEditText"
+        android:layout_width="250dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="68dp"
+        android:padding="10dp"
+        android:textColor="@color/Text_Color"
+        android:text="Confirmar contraseña"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/EDT_Registro_Contraseña"
+        />
+
+    <Button
+        android:id="@+id/Btn_Crear"
+        android:layout_width="wrap_content"
+        android:layout_marginTop="25dp"
+        android:layout_height="wrap_content"
+        android:text="Crear"
+        android:textSize="20dp"
+        style="@style/RoundedButton"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/EDT_Registro_ContraseñaConfirmacion"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
+
+    <ImageView
+        android:layout_width="200dp"
+        android:layout_height="150dp"
+        android:src="@drawable/logo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/Btn_Crear"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
