@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/agregar"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_margin="24dp"
+    tools:context=".AgregarActivity">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/contador1" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="232dp"
+                android:layout_height="41dp"
+                android:layout_gravity="right"
+                android:text="Contadores"
+                android:textSize="35sp"
+                android:textStyle="normal"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:layout_width="231dp"
+                android:layout_height="41dp"
+                android:layout_gravity="right"
+
+                android:text="Contadores activos: "
+                android:textSize="18sp"
+                android:textStyle="normal"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="41dp"
+        android:layout_gravity="center"
+        android:text="Agregar contador"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:layout_margin="24dp">
+
+
+
+        <EditText
+            android:id="@+id/numeroContador"
+            android:layout_width="257dp"
+            android:layout_height="34.37dp"
+            android:hint="Número de Contador"
+            android:layout_margin="10dp"
+            android:background="@color/BackgroundText_Color"
+            android:inputType="number" />
+
+        <EditText
+            android:id="@+id/barrio"
+            android:layout_width="257dp"
+            android:layout_height="34.37dp"
+            android:background="@color/BackgroundText_Color"
+            android:hint="Barrio"
+            android:inputType="number" />
+
+        <EditText
+            android:id="@+id/direccion"
+            android:layout_width="257dp"
+            android:layout_height="34.37dp"
+            android:background="@color/BackgroundText_Color"
+            android:hint="Dirección"
+            android:layout_margin="10dp"
+            android:inputType="number" />
+
+        <EditText
+            android:id="@+id/nombreContador"
+            android:layout_width="257dp"
+            android:layout_height="34.37dp"
+            android:hint="Nombre de contador"
+            android:background="@color/BackgroundText_Color"
+            android:inputType="text" />
+
+        <Spinner
+            android:id="@+id/spinnerOptions"
+            android:layout_width="257dp"
+            android:layout_height="34.37dp"
+            android:entries="@array/options_array"
+            android:backgroundTint="@color/BackgroundText_Color"
+            />
+        <Spinner
+            android:id="@+id/spinnerOptions1"
+            android:layout_width="257dp"
+            android:layout_height="34.37dp"
+            android:entries="@array/options_array"
+            android:backgroundTint="@color/BackgroundText_Color"
+            />
+
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="41dp"
+        android:layout_gravity="center"
+        android:text="Elige un color para tu contador"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/contador" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btnAdd"
+            android:layout_width="125dp"
+            android:layout_height="55dp"
+            android:backgroundTint="@color/AzulPetroleo"
+            android:backgroundn=""
+            android:text="Volver"
+            android:textColor="#FFFFFF"
+
+            />
+
+        <Space
+            android:layout_width="16dp"
+            android:layout_height="wrap_content" />
+
+        <Button
+            android:id="@+id/btnDelete"
+            android:layout_width="125dp"
+            android:layout_height="55dp"
+            android:backgroundTint="@color/AzulPetroleo"
+            android:backgroundn=""
+            android:text="Guardar"
+            android:textColor="#FFFFFF" />
+
+    </LinearLayout>
+
+</LinearLayout>
