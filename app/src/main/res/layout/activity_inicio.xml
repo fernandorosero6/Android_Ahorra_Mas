@@ -5,13 +5,14 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/white"
     tools:context=".InicioActivity">
 
     <ImageView
         android:id="@+id/IV_FotoInicio"
         android:layout_width="200dp"
         android:layout_height="200dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="4dp"
         android:src="@drawable/logo"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -38,49 +39,105 @@
         app:layout_constraintStart_toEndOf="@id/IV_FotoInicio"
         app:layout_constraintTop_toBottomOf="@+id/TXV_ContadoresActivos"
         />
+
     <!--Aqui va la imagen de contadores-->
+
+
+    <ImageView
+        android:id="@+id/IV_Contadores"
+        android:layout_width="180dp"
+        android:layout_height="180dp"
+        android:src="@drawable/contadores"
+        app:layout_constraintBottom_toTopOf="@+id/Btn_Contadores"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.086"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/IV_FotoInicio"
+        app:layout_constraintVertical_bias="0.553" />
 
     <Button
         android:id="@+id/Btn_Contadores"
-        android:layout_width="wrap_content"
+        android:layout_width="140dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="36dp"
-        android:layout_marginTop="124dp"
+        android:layout_marginStart="35dp"
         android:text="Contadores"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/IV_FotoInicio" />
+        app:layout_constraintTop_toBottomOf="@+id/IV_Contadores" />
+
+    <!--Imagen daños-->
+
+    <ImageView
+        android:id="@+id/IV_ReporteDaños"
+        android:layout_width="180dp"
+        android:layout_height="180dp"
+        android:layout_marginTop="50dp"
+        android:src="@drawable/reporte"
+        app:layout_constraintStart_toEndOf="@+id/IV_Contadores"
+        app:layout_constraintEnd_toEndOf="parent"
+
+        app:layout_constraintTop_toBottomOf="@+id/TXV_Residencia"
+        />
+
+    <!--Img presupuesto-->
+
 
     <Button
         android:id="@+id/Btn_Daños"
-        android:layout_width="wrap_content"
+        android:layout_width="140dp"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="16dp"
         android:text="Daños"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.875"
+        app:layout_constraintHorizontal_bias="0.583"
+        app:layout_constraintStart_toEndOf="@+id/Btn_Contadores"
+        app:layout_constraintTop_toBottomOf="@+id/IV_ReporteDaños" />
+
+    <ImageView
+        android:id="@+id/IV_Presupuesto"
+        android:layout_width="180dp"
+        android:layout_height="180dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="20dp"
+        android:src="@drawable/presupuesto"
+        app:layout_constraintBottom_toTopOf="@+id/Btn_Presupuesto"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/Btn_Contadores"
+        app:layout_constraintVertical_bias="0.0" />
 
     <Button
         android:id="@+id/Btn_Presupuesto"
-        android:layout_width="wrap_content"
+        android:layout_width="140dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="40dp"
-        android:layout_marginBottom="16dp"
+        android:layout_marginBottom="40dp"
         android:text="Presupuesto"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/IV_Presupuesto"
         app:layout_constraintEnd_toEndOf="parent"
-
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent" />
 
+    <!--Img historial-->
+
+    <ImageView
+        android:id="@+id/IV_Historial"
+        android:layout_width="180dp"
+        android:layout_height="180dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="20dp"
+        android:src="@drawable/historial"
+        app:layout_constraintBottom_toTopOf="@+id/Btn_Historial"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/IV_Presupuesto"
+        app:layout_constraintTop_toBottomOf="@+id/Btn_Daños"
+        app:layout_constraintVertical_bias="0.0" />
+
     <Button
-        android:layout_width="wrap_content"
+        android:id="@+id/Btn_Historial"
+        android:layout_width="140dp"
         android:layout_height="wrap_content"
         android:layout_marginEnd="40dp"
-        android:layout_marginBottom="16dp"
+        android:layout_marginBottom="40dp"
         android:text="Historial"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/IV_Historial"
         app:layout_constraintEnd_toEndOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>

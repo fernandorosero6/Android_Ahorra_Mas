@@ -4,10 +4,12 @@ import android.annotation.SuppressLint
 import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
+import android.widget.ImageView
 import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.compose.ui.semantics.Role.Companion.Button
+
 
 class LoginActivity : AppCompatActivity() {
     @SuppressLint("MissingInflatedId")
@@ -34,6 +36,7 @@ class LoginActivity : AppCompatActivity() {
             // Inicia la RegisterActivity
             val intent = Intent(this, InicioActivity::class.java)
             startActivity(intent)
+
         }
     }
 }
