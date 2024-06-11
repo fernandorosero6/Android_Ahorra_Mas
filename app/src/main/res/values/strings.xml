@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">Ahorra+</string>
+
+
+    <string name="select1">Seleccionar</string>
+
 </resources>
