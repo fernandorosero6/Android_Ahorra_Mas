@@ -7,4 +7,8 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="ButtonAccion_Color">#B0D892</color> <!-- Verde claro Boton para llamado de accion -->
+    <color name="Text_Color">#585355</color> <!-- Color para texto en la app -->
+    <color name="Icon_Color">#134A83</color> <!-- Color para los iconos como daños -->
+    <color name="BackgroundText_Color">#E7ECEF</color> <!-- Fondo para la celdas de texto donde el usuario relle informacion -->
 </resources>

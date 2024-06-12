@@ -1,6 +1,7 @@
 [versions]
 agp = "8.4.1"
 coreSplashscreen = "1.0.1"
+glide = "4.12.0"
 kotlin = "1.9.0"
 coreKtx = "1.13.1"
 junit = "4.13.2"
@@ -16,9 +17,15 @@ constraintlayout = "2.1.4"
 navigationFragmentKtx = "2.6.0"
 navigationUiKtx = "2.6.0"
 iconify = "2.2.2"
+navigationFragmentKtxVersion = "2.7.7"
+navigationUiKtxVersion = "2.7.7"
+lifecycleLivedataKtx = "2.8.1"
+lifecycleViewmodelKtx = "2.8.1"
 
 
 [libraries]
+compiler = { module = "com.github.bumptech.glide:compiler", version.ref = "glide" }
+glide = { module = "com.github.bumptech.glide:glide", version.ref = "glide" }
 iconify-fontawesome = { group = "com.joanzapata.iconify", name = "android-iconify-fontawesome", version.ref = "iconify" }
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
 androidx-core-splashscreen = { module = "androidx.core:core-splashscreen", version.ref = "coreSplashscreen" }
@@ -41,6 +48,10 @@ androidx-activity = { group = "androidx.activity", name = "activity", version.re
 androidx-constraintlayout = { group = "androidx.constraintlayout", name = "constraintlayout", version.ref = "constraintlayout" }
 androidx-navigation-fragment-ktx = { group = "androidx.navigation", name = "navigation-fragment-ktx", version.ref = "navigationFragmentKtx" }
 androidx-navigation-ui-ktx = { group = "androidx.navigation", name = "navigation-ui-ktx", version.ref = "navigationUiKtx" }
+navigation-fragment-ktx = { group = "androidx.navigation", name = "navigation-fragment-ktx", version.ref = "navigationFragmentKtxVersion" }
+navigation-ui-ktx = { group = "androidx.navigation", name = "navigation-ui-ktx", version.ref = "navigationUiKtxVersion" }
+androidx-lifecycle-livedata-ktx = { group = "androidx.lifecycle", name = "lifecycle-livedata-ktx", version.ref = "lifecycleLivedataKtx" }
+androidx-lifecycle-viewmodel-ktx = { group = "androidx.lifecycle", name = "lifecycle-viewmodel-ktx", version.ref = "lifecycleViewmodelKtx" }
 
 
 

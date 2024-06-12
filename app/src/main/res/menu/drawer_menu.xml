@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+<group android:checkableBehavior="single">
+    <item
+        android:id="@+id/nav_perfil"
+        android:title="Perfil" />
+    <item
+        android:id="@+id/nav_inicio"
+        android:title="Inicio" />
+    <item
+        android:id="@+id/nav_contadores"
+        android:title="Contadores" />
+    <item
+        android:id="@+id/nav_historial"
+        android:title="Historial" />
+    <item
+        android:id="@+id/nav_presupuesto"
+        android:title="Presupuesto" />
+    <item
+        android:id="@+id/nav_danios"
+        android:title="Daños" />
+    <item
+        android:id="@+id/nav_acerca_de"
+        android:title="Acerca de nosotros" />
+    <item
+        android:id="@+id/nav_daños"
+        android:title="Reporte daños" />
+</group>
+<item
+    android:id="@+id/nav_cerrar_sesion"
+    android:title="Cerrar sesión" />
+</menu>

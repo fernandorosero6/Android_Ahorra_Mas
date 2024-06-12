@@ -1,143 +1,160 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
+    android:id="@+id/drawerLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/white"
-    tools:context=".InicioActivity">
+    tools:context=".InicioActivity"
+    android:background="@color/white">
 
-    <ImageView
-        android:id="@+id/IV_FotoInicio"
-        android:layout_width="200dp"
-        android:layout_height="200dp"
-        android:layout_marginTop="4dp"
-        android:src="@drawable/logo"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+   <!-- Contenido principal -->
+   <LinearLayout
+       android:layout_width="match_parent"
+       android:layout_height="match_parent"
+       android:orientation="vertical">
 
-    <TextView
-        android:id="@+id/TXV_ContadoresActivos"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="96dp"
-        android:text="Contadores activos: 1"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.28"
-        app:layout_constraintStart_toEndOf="@id/IV_FotoInicio"
-        app:layout_constraintTop_toTopOf="parent" />
+      <!-- Toolbar -->
+      <androidx.appcompat.widget.Toolbar
+          android:id="@+id/toolbar"
+          android:layout_width="match_parent"
+          android:layout_height="?attr/actionBarSize"
+          android:background="?attr/colorPrimary"
+          android:elevation="4dp"
+          android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+          app:titleTextColor="@android:color/white"
+          app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
 
-    <TextView
-        android:id="@+id/TXV_Residencia"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:text="Residencia:Popayan"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.247"
-        app:layout_constraintStart_toEndOf="@id/IV_FotoInicio"
-        app:layout_constraintTop_toBottomOf="@+id/TXV_ContadoresActivos"
-        />
+      <!-- Contenido principal -->
+      <androidx.constraintlayout.widget.ConstraintLayout
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          android:padding="16dp">
 
-    <!--Aqui va la imagen de contadores-->
+         <ImageView
+             android:id="@+id/IV_FotoInicio"
+             android:layout_width="150dp"
+             android:layout_height="150dp"
+             android:scaleType="centerCrop"
+             android:src="@drawable/selfie"
+             app:layout_constraintStart_toStartOf="parent"
+             app:layout_constraintTop_toTopOf="parent"
+             app:shapeAppearanceOverlay="@style/CircularImageView" />
 
+         <TextView
+             android:id="@+id/TXV_ContadoresActivos"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_marginTop="48dp"
+             android:text="Contadores: 1"
+             android:textSize="20sp"
+             app:layout_constraintEnd_toEndOf="parent"
+             app:layout_constraintHorizontal_bias="0.192"
+             app:layout_constraintStart_toEndOf="@+id/IV_FotoInicio"
+             app:layout_constraintTop_toTopOf="parent" />
 
-    <ImageView
-        android:id="@+id/IV_Contadores"
-        android:layout_width="180dp"
-        android:layout_height="180dp"
-        android:src="@drawable/contadores"
-        app:layout_constraintBottom_toTopOf="@+id/Btn_Contadores"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.086"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/IV_FotoInicio"
-        app:layout_constraintVertical_bias="0.553" />
+         <TextView
+             android:id="@+id/TXV_Residencia"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_marginStart="20dp"
+             android:text="Residencia: Popayan"
+             android:textSize="20sp"
+             app:layout_constraintStart_toEndOf="@id/IV_FotoInicio"
+             app:layout_constraintTop_toBottomOf="@id/TXV_ContadoresActivos" />
 
-    <Button
-        android:id="@+id/Btn_Contadores"
-        android:layout_width="140dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="35dp"
-        android:text="Contadores"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/IV_Contadores" />
+         <ImageView
+             android:id="@+id/IV_Contadores"
+             android:layout_width="180dp"
+             android:layout_height="180dp"
+             android:src="@drawable/contadores"
+             app:layout_constraintEnd_toStartOf="@+id/IV_ReporteDaños"
+             app:layout_constraintStart_toStartOf="parent"
+             app:layout_constraintTop_toBottomOf="@id/IV_FotoInicio" />
 
-    <!--Imagen daños-->
+         <Button
+             android:id="@+id/Btn_Contadores"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_marginStart="36dp"
+             android:layout_marginTop="4dp"
+             android:text="Contadores"
+             android:backgroundTint="@color/ButtonAccion_Color"
+             app:layout_constraintStart_toStartOf="parent"
+             app:layout_constraintTop_toBottomOf="@id/IV_Contadores" />
 
-    <ImageView
-        android:id="@+id/IV_ReporteDaños"
-        android:layout_width="180dp"
-        android:layout_height="180dp"
-        android:layout_marginTop="50dp"
-        android:src="@drawable/reporte"
-        app:layout_constraintStart_toEndOf="@+id/IV_Contadores"
-        app:layout_constraintEnd_toEndOf="parent"
+         <ImageView
+             android:id="@+id/IV_ReporteDaños"
+             android:layout_width="180dp"
+             android:layout_height="180dp"
+             android:layout_marginTop="48dp"
+             android:src="@drawable/reporte"
+             app:layout_constraintEnd_toEndOf="parent"
+             app:layout_constraintStart_toEndOf="@id/IV_Contadores"
+             app:layout_constraintTop_toBottomOf="@id/TXV_Residencia" />
 
-        app:layout_constraintTop_toBottomOf="@+id/TXV_Residencia"
-        />
+         <Button
+             android:id="@+id/Btn_Daños"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_marginStart="40dp"
+             android:layout_marginTop="4dp"
+             android:text="Daños"
+             android:backgroundTint="@color/ButtonAccion_Color"
 
-    <!--Img presupuesto-->
+             app:layout_constraintEnd_toEndOf="parent"
+             app:layout_constraintHorizontal_bias="0.51"
+             app:layout_constraintStart_toEndOf="@+id/Btn_Contadores"
+             app:layout_constraintTop_toBottomOf="@id/IV_ReporteDaños" />
 
+         <ImageView
+             android:id="@+id/IV_Presupuesto"
+             android:layout_width="180dp"
+             android:layout_height="180dp"
+             android:src="@drawable/presupuesto"
+             app:layout_constraintStart_toStartOf="parent"
+             app:layout_constraintTop_toBottomOf="@id/Btn_Contadores" />
 
-    <Button
-        android:id="@+id/Btn_Daños"
-        android:layout_width="140dp"
-        android:layout_height="wrap_content"
-        android:text="Daños"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.583"
-        app:layout_constraintStart_toEndOf="@+id/Btn_Contadores"
-        app:layout_constraintTop_toBottomOf="@+id/IV_ReporteDaños" />
+         <Button
+             android:id="@+id/Btn_Presupuesto"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_marginStart="28dp"
+             android:layout_marginTop="8dp"
+             android:text="Presupuesto"
+             android:backgroundTint="@color/ButtonAccion_Color"
+             app:layout_constraintStart_toStartOf="parent"
+             app:layout_constraintTop_toBottomOf="@+id/IV_Presupuesto" />
 
-    <ImageView
-        android:id="@+id/IV_Presupuesto"
-        android:layout_width="180dp"
-        android:layout_height="180dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginStart="20dp"
-        android:src="@drawable/presupuesto"
-        app:layout_constraintBottom_toTopOf="@+id/Btn_Presupuesto"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Btn_Contadores"
-        app:layout_constraintVertical_bias="0.0" />
+         <ImageView
+             android:id="@+id/IV_HistorialInicio"
+             android:layout_width="180dp"
+             android:layout_height="180dp"
+             android:src="@drawable/historial"
+             app:layout_constraintStart_toEndOf="@id/IV_Presupuesto"
+             app:layout_constraintTop_toBottomOf="@id/Btn_Daños" />
 
-    <Button
-        android:id="@+id/Btn_Presupuesto"
-        android:layout_width="140dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="40dp"
-        android:layout_marginBottom="40dp"
-        android:text="Presupuesto"
-        app:layout_constraintTop_toBottomOf="@+id/IV_Presupuesto"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent" />
+         <Button
+             android:id="@+id/Btn_HistorialInicio"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_marginTop="8dp"
+             android:layout_marginEnd="44dp"
+             android:backgroundTint="@color/ButtonAccion_Color"
+             android:text="Historial"
+             app:layout_constraintEnd_toEndOf="parent"
+             app:layout_constraintTop_toBottomOf="@+id/IV_HistorialInicio" />
 
-    <!--Img historial-->
+      </androidx.constraintlayout.widget.ConstraintLayout>
+   </LinearLayout>
 
-    <ImageView
-        android:id="@+id/IV_Historial"
-        android:layout_width="180dp"
-        android:layout_height="180dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginStart="20dp"
-        android:src="@drawable/historial"
-        app:layout_constraintBottom_toTopOf="@+id/Btn_Historial"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@+id/IV_Presupuesto"
-        app:layout_constraintTop_toBottomOf="@+id/Btn_Daños"
-        app:layout_constraintVertical_bias="0.0" />
+   <!-- NavigationView (Menú deslizante) -->
+   <com.google.android.material.navigation.NavigationView
+       android:id="@+id/navView"
+       android:layout_width="wrap_content"
+       android:layout_height="match_parent"
+       android:layout_gravity="start"
+       app:headerLayout="@layout/nav_header_menu_hamburguesa"
+       app:menu="@menu/drawer_menu"/>
 
-    <Button
-        android:id="@+id/Btn_Historial"
-        android:layout_width="140dp"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="40dp"
-        android:layout_marginBottom="40dp"
-        android:text="Historial"
-        app:layout_constraintTop_toBottomOf="@+id/IV_Historial"
-        app:layout_constraintEnd_toEndOf="parent" />
-</androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.drawerlayout.widget.DrawerLayout>

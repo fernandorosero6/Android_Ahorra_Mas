@@ -26,10 +26,25 @@
         <item name="windowSplashScreenAnimationDuration">300</item>
         <item name="postSplashScreenTheme">@style/Theme.Ahorra</item>
     </style>
-  <!-- Base application theme. -->
+    <!-- Base application theme. -->
     <style name="Base.Theme.Ahorra" parent="Theme.Material3.DayNight.NoActionBar">
         <!-- Customize your light theme here. -->
         <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
     </style>
+
+    <!-- Estilo circular para ShapeableImageView -->
+    <style name="CircularImageView" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">50%</item>
+    </style>
+
+    <style name="Theme.Ahorra.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="Theme.Ahorra.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="Theme.Ahorra.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 </resources>
 

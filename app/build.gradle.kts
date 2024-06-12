@@ -47,12 +47,29 @@ android {
             excludes += "/META-INF/{AL2.0,LGPL2.1}"
         }
     }
+
+    buildFeatures {
+        viewBinding = true
+    }
+
 }
 
 dependencies {
 
     //implementation 'com.google.android.material:material:1.3.0' // o la última versión
     //implementation 'androidx.appcompat:appcompat:1.2.0' // o la última versión
+    implementation ("androidx.appcompat:appcompat:1.3.1")
+    implementation ("com.google.android.material:material:1.4.0")
+    implementation ("androidx.constraintlayout:constraintlayout:2.1.0")
+    // Dependencia para DataBinding
+    implementation ("androidx.databinding:databinding-runtime:4.2.2")
+    implementation ("com.google.android.material:material:1.4.0")
+    implementation (libs.glide)
+    implementation(libs.navigation.fragment.ktx)
+    implementation(libs.navigation.ui.ktx)
+    implementation(libs.androidx.lifecycle.livedata.ktx)
+    implementation(libs.androidx.lifecycle.viewmodel.ktx)
+    annotationProcessor (libs.compiler)
     implementation (libs.androidx.core.splashscreen)
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.lifecycle.runtime.ktx)

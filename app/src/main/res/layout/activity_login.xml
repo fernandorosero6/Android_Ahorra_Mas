@@ -23,7 +23,7 @@
     <EditText
         android:id="@+id/EDT1"
         android:layout_width="250dp"
-        android:layout_height="40dp"
+        android:layout_height="48dp"
         android:layout_marginTop="20dp"
         android:padding="10dp"
         android:text="Correo o Documento"
@@ -37,7 +37,7 @@
     <EditText
         android:id="@+id/EDT2"
         android:layout_width="250dp"
-        android:layout_height="40dp"
+        android:layout_height="48dp"
         android:layout_marginTop="20dp"
         android:padding="10dp"
         style="@style/RoundedEditText"
@@ -48,21 +48,21 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/EDT1" />
 
+
     <Button
         android:id="@+id/Btn1_Login"
         android:layout_width="250dp"
-        android:layout_height="40dp"
-        android:layout_marginBottom="164dp"
-        android:background="@drawable/rounded_button_background"
-        android:text="Iniciar Sesion"
+        android:layout_height="48dp"
+       android:layout_marginTop="20dp"
+        android:backgroundTint="@color/ButtonAccion_Color"
+        android:text="iniciar sesion"
         android:textColor="@android:color/white"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:textSize="18dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/EDT2"
-        app:layout_constraintVertical_bias="0.057"
-        style="@style/RoundedButton"/>
+        app:layout_constraintVertical_bias="0.281" />
 
     <TextView
         android:id="@+id/TXV1_OlvidasteContraseña"
@@ -94,7 +94,7 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="44dp"
         android:text="¿No tienes cuenta?"
-        android:textSize="17dp"
+        android:textSize="18dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.244"

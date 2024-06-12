@@ -1,6 +1,89 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white">
+
+    <ImageView
+        android:id="@+id/IV_Historia"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:src="@drawable/historial"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+
+    <TextView
+        android:id="@+id/TXV_HistorialDeConsumo"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="68dp"
+        android:layout_marginEnd="60dp"
+        android:text="Historial de consumo"
+        android:textSize="25dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Spinner
+        android:id="@+id/SP_OpcionesHistorial"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="200dp"/>
+
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/fragmentContainer"
+        android:layout_width="wrap_content"
+        android:layout_height="250dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/SP_OpcionesHistorial"
+        app:layout_constraintVertical_bias="0.0"/>
+
+    <Button
+        android:id="@+id/Btn_HistorialSemanal"
+        android:layout_width="125dp"
+        android:layout_height="50dp"
+        android:text="Semanal"
+        android:textSize="18dp"
+        android:backgroundTint="@color/ButtonAccion_Color"
+        android:layout_marginTop="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/fragmentContainer"
+        />
+
+    <Button
+        android:id="@+id/Btn_HistorialMensual"
+        android:layout_width="125dp"
+        android:layout_height="50dp"
+        android:text="Mensual"
+        android:textSize="18dp"
+        android:backgroundTint="@color/ButtonAccion_Color"
+        android:layout_marginTop="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Btn_HistorialSemanal"
+        />
+
+    <Button
+        android:id="@+id/Btn_HistorialAnual"
+        android:layout_width="125dp"
+        android:layout_height="50dp"
+        android:text="Anual"
+        android:textSize="18dp"
+        android:backgroundTint="@color/ButtonAccion_Color"
+        android:layout_marginTop="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Btn_HistorialMensual"
+        />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

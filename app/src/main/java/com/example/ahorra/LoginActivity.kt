@@ -30,7 +30,7 @@ class LoginActivity : AppCompatActivity() {
 
         val LoginButton: Button = findViewById(R.id.Btn1_Login)
 
-        // Establece un OnClickListener para el botón
+        // Establece un OnClickListener para ir al registro
 
         LoginButton.setOnClickListener {
             // Inicia la RegisterActivity
@@ -38,6 +38,7 @@ class LoginActivity : AppCompatActivity() {
             startActivity(intent)
 
         }
+
     }
 }
 

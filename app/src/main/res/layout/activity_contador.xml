@@ -237,7 +237,6 @@
             android:layout_width="107dp"
             android:layout_height="55dp"
             android:backgroundTint="@color/ButtonAccion_Color"
-            android:backgroundn=""
             android:text="Agregar"
             android:textColor="#FFFFFF"
 
@@ -251,8 +250,7 @@
             android:id="@+id/btnDelete"
             android:layout_width="107dp"
             android:layout_height="55dp"
-            android:backgroundTint="@color/ButtonAccion_Gris"
-            android:backgroundn=""
+            android:backgroundTint="@color/black"
             android:text="Eliminar"
             android:textColor="#FFFFFF" />
 

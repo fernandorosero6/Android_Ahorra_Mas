@@ -12,7 +12,24 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Ahorra"
         tools:targetApi="31">
-
+        <activity
+            android:name=".MenuHamburguesa"
+            android:exported="false"
+            android:label="@string/title_activity_menu_hamburguesa"
+            android:theme="@style/Theme.Ahorra.NoActionBar" />
+        <activity
+            android:name=".navHeader"
+            android:exported="false" />
+        <activity
+            android:name=".FragmentoHistorialAnual"
+            android:exported="false" />
+        <activity
+            android:name=".FragmentoHistorialMensual"
+            android:exported="false" />
+        <activity
+            android:name=".FragmentoHistorialSemanal"
+            android:exported="false" />
+        <activity android:name=".HistorialActivity" />
         <activity
             android:name=".LoginActivity"
             android:exported="false" />
@@ -22,6 +39,7 @@
             android:theme="@style/Theme.App.Starting">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
