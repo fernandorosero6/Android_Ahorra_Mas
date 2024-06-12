@@ -97,7 +97,6 @@ class InicioActivity : AppCompatActivity() {
         }
 
         binding.BtnContadores.setOnClickListener {
-            Log.d("BtnContadores", "Boton contadores clikeando")
             val intent = Intent(this, ContadorActivity::class.java)
             startActivity(intent)
         }

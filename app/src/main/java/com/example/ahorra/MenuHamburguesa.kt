@@ -1,21 +1,21 @@
 package com.example.ahorra
 
+import android.graphics.PorterDuff
 import android.os.Bundle
 import android.view.Menu
-import com.google.android.material.snackbar.Snackbar
-import com.google.android.material.navigation.NavigationView
+import androidx.appcompat.app.ActionBarDrawerToggle
+import androidx.appcompat.app.AppCompatActivity
+import androidx.appcompat.widget.Toolbar
+import androidx.core.content.ContextCompat
+import androidx.drawerlayout.widget.DrawerLayout
 import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.navigateUp
 import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
-import androidx.drawerlayout.widget.DrawerLayout
-import androidx.appcompat.app.AppCompatActivity
 import com.example.ahorra.databinding.ActivityMenuHamburguesaBinding
-
-
-
-
+import com.google.android.material.navigation.NavigationView
+import com.google.android.material.snackbar.Snackbar
 
 
 class MenuHamburguesa : AppCompatActivity() {
@@ -39,8 +39,7 @@ class MenuHamburguesa : AppCompatActivity() {
         val drawerLayout: DrawerLayout = binding.drawerLayout
         val navView: NavigationView = binding.navView
         val navController = findNavController(R.id.nav_host_fragment_content_menu_hamburguesa)
-        // Passing each menu ID as a set of Ids because each
-        // menu should be considered as top level destinations.
+
         appBarConfiguration = AppBarConfiguration(
             setOf(
                 R.id.nav_home, R.id.nav_gallery, R.id.nav_slideshow
@@ -48,6 +47,14 @@ class MenuHamburguesa : AppCompatActivity() {
         )
         setupActionBarWithNavController(navController, appBarConfiguration)
         navView.setupWithNavController(navController)
+
+        val drawerToggle = ActionBarDrawerToggle(
+            this, drawerLayout, binding.appBarMenuHamburguesa.toolbar,
+            R.string.navigation_drawer_open, R.string.navigation_drawer_close
+        )
+
+        drawerToggle.drawerArrowDrawable.color = ContextCompat.getColor(this, android.R.color.black)
+
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
@@ -60,4 +67,5 @@ class MenuHamburguesa : AppCompatActivity() {
         val navController = findNavController(R.id.nav_host_fragment_content_menu_hamburguesa)
         return navController.navigateUp(appBarConfiguration) || super.onSupportNavigateUp()
     }
+
 }
