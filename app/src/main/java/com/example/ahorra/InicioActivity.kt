@@ -50,6 +50,8 @@ class InicioActivity : AppCompatActivity() {
                     true
                 }
                 R.id.nav_contadores -> {
+                    val intent = Intent(this, ContadorActivity::class.java)
+                    startActivity(intent)
                     // Handle the counters action
                     drawerLayout.closeDrawer(GravityCompat.START)
                     true
