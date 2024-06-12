@@ -2,6 +2,7 @@ package com.example.ahorra
 
 import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import android.view.MenuItem
 import android.widget.Toolbar
 import androidx.appcompat.app.ActionBarDrawerToggle
@@ -87,11 +88,18 @@ class InicioActivity : AppCompatActivity() {
         // Default selection
         binding.navView.setCheckedItem(R.id.nav_inicio)
 
-        // Example button click listener (replace with your logic)
+        //cambio de activitys
         binding.BtnHistorialInicio.setOnClickListener {
             val intent = Intent(this, HistorialActivity::class.java)
             startActivity(intent)
         }
+
+        binding.BtnContadores.setOnClickListener {
+            Log.d("BtnContadores", "Boton contadores clikeando")
+            val intent = Intent(this, ContadorActivity::class.java)
+            startActivity(intent)
+        }
+
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {

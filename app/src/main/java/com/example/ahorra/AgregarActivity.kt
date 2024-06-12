@@ -10,6 +10,7 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.example.ahorra.Agregar2Activity
 import com.example.ahorra.R
+import com.example.ahorra.databinding.ActivityAgregarBinding
 
 class AgregarActivity : AppCompatActivity() {
 
@@ -20,6 +21,9 @@ class AgregarActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_agregar)
+        val binding = ActivityAgregarBinding.inflate(layoutInflater)
+        setContentView(binding.root)
+
 
         spinnerEstrato = findViewById(R.id.spinnerEstrato)
         spinnerCategoria = findViewById(R.id.spinnerCategoría)
