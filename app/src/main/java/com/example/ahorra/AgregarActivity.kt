@@ -10,15 +10,18 @@ import android.widget.Button
 import android.widget.Spinner
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import com.example.ahorra.databinding.ActivityAgregarBinding
 
 
 class AgregarActivity: AppCompatActivity() {
-
+    private lateinit var binding: ActivityAgregarBinding
     private lateinit var spinner: Spinner
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_agregar)
+        binding = ActivityAgregarBinding.inflate(layoutInflater)
+        setContentView(binding.root)
 
         // spinner = findViewById(R.id.spinnerEstrato)
 
