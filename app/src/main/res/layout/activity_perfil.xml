@@ -65,7 +65,7 @@
         android:layout_height="52dp"
         android:layout_marginTop="20dp"
         android:paddingStart="15dp"
-        android:text="102514535"
+        android:text="Contadores"
         android:textColor="@color/Text_Color"
         android:backgroundTint="@color/Icon_colorClaro"
         app:layout_constraintEnd_toEndOf="parent"
@@ -73,7 +73,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/Btn_SeguridadPerfil" />
 
-    <Button
+    <!--<Button
         android:id="@+id/Btn_TemasPerfil"
         android:layout_width="300dp"
         android:layout_height="52dp"
@@ -85,18 +85,17 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.522"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Btn_ContadoresPerfil" />
+        app:layout_constraintTop_toBottomOf="@+id/Btn_ContadoresPerfil" /-->
 
     <Button
         android:id="@+id/Btn_GuardarPerfil"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Guardar"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="136dp"
         android:backgroundTint="@color/ButtonAccion_Color"
-        app:layout_constraintStart_toStartOf="parent"
+        android:text="Guardar"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Btn_TemasPerfil"
-        />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Btn_SeguridadPerfil" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

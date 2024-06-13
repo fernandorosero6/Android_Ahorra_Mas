@@ -28,7 +28,7 @@ class AgregarActivity : AppCompatActivity() {
         // Initialize btnContinuar
         btnContinuar = findViewById(R.id.btnContinuar)
         btnContinuar.setOnClickListener {
-            startActivity(Intent(this, Agregar2Activity::class.java))
+            startActivity(Intent(this, AgregarActivity2::class.java))
         }
     }
 
@@ -53,6 +53,12 @@ class AgregarActivity : AppCompatActivity() {
             }
 
             override fun onNothingSelected(parent: AdapterView<*>) {}
+        }
+
+        val btnContinuar = findViewById<Button>(R.id.btnContinuar)
+        btnContinuar.setOnClickListener {
+            val intent = Intent(this@AgregarActivity, AgregarActivity2::class.java)
+            startActivity(intent)
         }
     }
 }

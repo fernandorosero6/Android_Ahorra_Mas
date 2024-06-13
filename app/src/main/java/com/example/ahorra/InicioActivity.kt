@@ -106,6 +106,14 @@ class InicioActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
+        binding.BtnPresupuesto.setOnClickListener{
+            val intent = Intent(this, PresupuestoActivity::class.java)
+            startActivity(intent)
+        }
+
+
+
+
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {

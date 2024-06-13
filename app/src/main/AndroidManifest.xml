@@ -12,6 +12,20 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Ahorra"
         tools:targetApi="31">
+
+
+
+
+
+        <activity
+            android:name=".AgregarActivity2"
+            android:exported="false" />
+        <activity
+            android:name=".SimuladorActivity"
+            android:exported="false" />
+        <activity
+            android:name=".PresupuestoActivity"
+            android:exported="false" />
         <activity
             android:name=".ContrasenaSeguridadActiviy"
             android:exported="false" />
@@ -27,7 +41,7 @@
             android:exported="false" />
         <activity android:name=".ContadorActivity" />
         <activity android:name=".AgregarActivity" />
-        <activity android:name=".Agregar2Activity" />
+
         <activity
             android:name=".MenuHamburguesa"
             android:exported="false"

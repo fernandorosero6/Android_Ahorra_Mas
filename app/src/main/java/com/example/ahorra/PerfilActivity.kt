@@ -28,5 +28,10 @@ class PerfilActivity : AppCompatActivity() {
             startActivity(intetn)
         }
 
+        binding.BtnContadoresPerfil.setOnClickListener{
+            val intent = Intent(this, ContadorActivity::class.java)
+            startActivity(intent)
+        }
+
     }
 }
