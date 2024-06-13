@@ -240,9 +240,7 @@
             android:layout_height="55dp"
             android:backgroundTint="@color/ButtonAccion_Color"
             android:text="Agregar"
-            android:textColor="#FFFFFF"
-
-            />
+            android:textColor="#FFFFFF"/>
 
         <Space
             android:layout_width="16dp"

@@ -3,17 +3,23 @@ package com.example.ahorra
 import android.os.Bundle
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
+import com.example.ahorra.databinding.ActivityConctactoDirectoBinding
 
 class Conctacto_Directo : AppCompatActivity() {
+    private lateinit var binding: ActivityConctactoDirectoBinding
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        // Habilitar el modo edge-to-edge (asegúrate de tener esta función implementada)
         enableEdgeToEdge()
-        setContentView(R.layout.activity_conctacto_directo)
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
-            val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
+
+        // Inicializar ViewBinding correctamente
+        binding = ActivityConctactoDirectoBinding.inflate(layoutInflater)
+        setContentView(binding.root)
+
+        // Configurar los insets si es necesario
+        binding.root.setOnApplyWindowInsetsListener { view, insets ->
+            // Manejar los insets aquí si es necesario
             insets
         }
     }

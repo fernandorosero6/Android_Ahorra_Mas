@@ -40,36 +40,36 @@ class InicioActivity : AppCompatActivity() {
         binding.navView.setNavigationItemSelectedListener { menuItem ->
             when (menuItem.itemId) {
                 R.id.nav_perfil -> {
-                    // Handle the profile action (if any)
+                    val intent = Intent(this, PerfilActivity::class.java)
+                    startActivity(intent)
                     drawerLayout.closeDrawer(GravityCompat.START)
                     true
                 }
                 R.id.nav_inicio -> {
-                    // Handle the home action
+                    val intent = Intent(this, InicioActivity::class.java)
+                    startActivity(intent)
                     drawerLayout.closeDrawer(GravityCompat.START)
                     true
                 }
                 R.id.nav_contadores -> {
                     val intent = Intent(this, ContadorActivity::class.java)
                     startActivity(intent)
-                    // Handle the counters action
                     drawerLayout.closeDrawer(GravityCompat.START)
                     true
                 }
                 R.id.nav_historial -> {
-                    // Handle the history action
                     val intent = Intent(this, HistorialActivity::class.java)
                     startActivity(intent)
                     drawerLayout.closeDrawer(GravityCompat.START)
                     true
                 }
                 R.id.nav_presupuesto -> {
-                    // Handle the budget action (if any)
                     drawerLayout.closeDrawer(GravityCompat.START)
                     true
                 }
                 R.id.nav_danios -> {
-                    // Handle the damages action (if any)
+                    val intent = Intent(this, ReporteDeDanosActivity::class.java)
+                    startActivity(intent)
                     drawerLayout.closeDrawer(GravityCompat.START)
                     true
                 }
@@ -98,6 +98,11 @@ class InicioActivity : AppCompatActivity() {
 
         binding.BtnContadores.setOnClickListener {
             val intent = Intent(this, ContadorActivity::class.java)
+            startActivity(intent)
+        }
+
+        binding.BtnDaOs.setOnClickListener {
+            val intent = Intent(this, ReporteDeDanosActivity::class.java)
             startActivity(intent)
         }
 
