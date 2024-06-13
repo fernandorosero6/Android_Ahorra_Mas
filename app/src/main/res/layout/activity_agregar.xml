@@ -89,8 +89,8 @@
             android:id="@+id/barrio"
             android:layout_width="257dp"
             android:layout_height="wrap_content"
-            android:textSize="20dp"
             android:hint="Barrio"
+            android:textSize="20dp"
             android:inputType="number" />
 
         <EditText
@@ -99,7 +99,6 @@
             android:layout_height="wrap_content"
             android:hint="Dirección"
             android:textSize="20dp"
-
             android:inputType="number" />
 
 
@@ -133,8 +132,9 @@
         <EditText
             android:id="@+id/ultimoConsumo"
             android:layout_width="257dp"
-            android:layout_height="48dp"
+            android:layout_height="wrap_content"
             android:hint="Último Consumo"
+            android:textSize="20dp"
             android:inputType="number" />
 
 
