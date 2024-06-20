@@ -12,11 +12,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Ahorra"
         tools:targetApi="31">
-
-
-
-
-
+        <activity
+            android:name=".enviarPregunta_acercadenosotros"
+            android:exported="false" />
+        <activity
+            android:name=".pantalla2_acercadenosotros"
+            android:exported="false" />
         <activity
             android:name=".AgregarActivity2"
             android:exported="false" />
@@ -41,7 +42,6 @@
             android:exported="false" />
         <activity android:name=".ContadorActivity" />
         <activity android:name=".AgregarActivity" />
-
         <activity
             android:name=".MenuHamburguesa"
             android:exported="false"
