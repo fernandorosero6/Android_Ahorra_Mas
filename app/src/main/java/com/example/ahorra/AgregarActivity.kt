@@ -1,5 +1,6 @@
 package com.example.ahorra
 
+import android.app.DatePickerDialog
 import android.content.Intent
 import android.os.Bundle
 import android.view.View
@@ -10,6 +11,7 @@ import android.widget.Spinner
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.example.ahorra.databinding.ActivityAgregarBinding
+import java.util.Calendar
 
 class AgregarActivity : AppCompatActivity() {
     private lateinit var binding: ActivityAgregarBinding
@@ -18,6 +20,10 @@ class AgregarActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
+
+
+
         binding = ActivityAgregarBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
@@ -26,10 +32,17 @@ class AgregarActivity : AppCompatActivity() {
         setupSpinners()
 
         // Initialize btnContinuar
-        btnContinuar = findViewById(R.id.btnContinuar)
+        val btnContinuar: Button = findViewById(R.id.btnContinuar)
+
+        // Establece un OnClickListener para ir al registro
+
         btnContinuar.setOnClickListener {
-            startActivity(Intent(this, AgregarActivity2::class.java))
+            // Inicia la RegisterActivity
+            val intent = Intent(this@AgregarActivity, AgregarActivity2::class.java)
+            startActivity(intent)
+
         }
+
     }
 
     private fun setupSpinners() {
@@ -47,21 +60,28 @@ class AgregarActivity : AppCompatActivity() {
         spinner2.adapter = arrayAdapter2
 
         spinner.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
-            override fun onItemSelected(parent: AdapterView<*>, view: View?, position: Int, id: Long) {
+            override fun onItemSelected(
+                parent: AdapterView<*>,
+                view: View?,
+                position: Int,
+                id: Long
+            ) {
                 val selectedItem = parent.getItemAtPosition(position).toString()
-                Toast.makeText(this@AgregarActivity, "You have selected $selectedItem flavor", Toast.LENGTH_SHORT).show()
+                Toast.makeText(
+                    this@AgregarActivity,
+                    "You have selected $selectedItem flavor",
+                    Toast.LENGTH_SHORT
+                ).show()
             }
 
             override fun onNothingSelected(parent: AdapterView<*>) {}
         }
-
-        val btnContinuar = findViewById<Button>(R.id.btnContinuar)
-        btnContinuar.setOnClickListener {
-            val intent = Intent(this@AgregarActivity, AgregarActivity2::class.java)
-            startActivity(intent)
-        }
     }
+
+   
 }
+
+
 
 
 

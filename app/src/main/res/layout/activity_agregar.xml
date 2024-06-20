@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/agregar"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:layout_margin="24dp"
+    android:padding="24dp"
     tools:context=".AgregarActivity"
     android:background="@color/white"
     >
@@ -16,7 +16,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        >
+        tools:ignore="MissingConstraints">
 
         <ImageView
             android:id="@+id/imageView"
@@ -55,7 +55,9 @@
                 app:layout_constraintTop_toTopOf="parent" />
 
         </LinearLayout>
+
     </LinearLayout>
+
 
     <TextView
         android:layout_width="wrap_content"
@@ -67,15 +69,18 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.179" />
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_margin="24dp"
         android:gravity="center"
         android:orientation="vertical"
-        android:layout_margin="24dp">
-
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="48dp"
+        tools:layout_editor_absoluteY="166dp">
 
 
         <EditText
@@ -83,8 +88,8 @@
             android:layout_width="257dp"
             android:layout_height="wrap_content"
             android:hint="Número de Contador"
-            android:textSize="20dp"
-            android:inputType="number" />
+            android:inputType="number"
+            android:textSize="20dp" />
 
         <EditText
             android:id="@+id/barrio"
@@ -98,14 +103,15 @@
             android:layout_width="257dp"
             android:layout_height="wrap_content"
             android:hint="Dirección"
-            android:textSize="20dp"
-            />
+            android:textSize="20dp" />
 
 
         <Spinner
             android:id="@+id/spinnerEstrato"
             android:layout_width="257dp"
             android:layout_height="48dp"
+            android:text="Estrato"
+
 
             />
 
@@ -113,42 +119,54 @@
             android:id="@+id/spinnerCategoría"
             android:layout_width="257dp"
             android:layout_height="48dp"
-            />
+            android:text="Categoría" />
 
         <EditText
             android:id="@+id/tarifaAgua"
             android:layout_width="257dp"
             android:layout_height="wrap_content"
             android:hint="Tarifa de Agua"
-            android:textSize="20dp"
-            android:inputType="number"/>
+            android:inputType="number"
+            android:textSize="20dp" />
 
         <EditText
             android:id="@+id/tarifaAlcantarillado"
             android:layout_width="257dp"
             android:layout_height="wrap_content"
             android:hint="Tarifa de Alcantarillado"
-            android:textSize="20dp"
-            android:inputType="number"/>
+            android:inputType="number"
+            android:textSize="20dp" />
 
         <EditText
             android:id="@+id/ultimoConsumo"
             android:layout_width="257dp"
             android:layout_height="wrap_content"
             android:hint="Último Consumo"
-            android:textSize="20dp"
-            android:inputType="number"/>
+            android:inputType="number"
+            android:textSize="20dp" />
+
+        <EditText
+            android:id="@+id/proximoPago"
+            android:layout_width="257dp"
+            android:layout_height="wrap_content"
+            android:drawableEnd="@drawable/calendar"
+            android:focusable="false"
+            android:hint="Próximo Pago"
+            android:inputType="none" />
 
 
     </LinearLayout>
-
 
     <Button
         android:id="@+id/btnContinuar"
         android:layout_width="125dp"
         android:layout_height="55dp"
         android:layout_gravity="center_horizontal"
+        android:backgroundTint="@color/ButtonAzul"
         android:text="Continuar"
-        android:textColor="#FFFFFF" />
+        android:textColor="#FFFFFF"
+        tools:layout_editor_absoluteX="116dp"
+        tools:layout_editor_absoluteY="613dp"
+        tools:ignore="MissingConstraints" />
 
-</LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

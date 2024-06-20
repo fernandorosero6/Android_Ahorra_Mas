@@ -28,6 +28,8 @@
         android:gravity="center"
         android:text="Contraseña y seguridad"
         android:textSize="27dp"
+        android:textStyle="bold"
+        android:textColor="@color/Text_Color"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"

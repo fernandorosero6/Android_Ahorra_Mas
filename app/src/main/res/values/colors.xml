@@ -12,4 +12,8 @@
     <color name="Icon_Color">#134A83</color> <!-- Color para los iconos como daños -->
     <color name="BackgroundText_Color">#E7ECEF</color> <!-- Fondo para la celdas de texto donde el usuario relle informacion -->
     <color name="Icon_colorClaro">#A3CEF1</color>
+    <color name="ButtonAzul">#6096BA</color>
+    <color name="ButtonGris">#8B8C89</color>
+
+
 </resources>

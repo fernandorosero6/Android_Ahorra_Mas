@@ -11,8 +11,8 @@
 
     <ImageView
         android:id="@+id/image_view_Login"
-        android:layout_width="250dp"
-        android:layout_height="200dp"
+        android:layout_width="170dp"
+        android:layout_height="131dp"
         android:layout_marginTop="80dp"
         android:src="@drawable/logo"
         app:layout_constraintEnd_toEndOf="parent"
@@ -28,6 +28,7 @@
         android:padding="10dp"
         android:text="Correo o Documento"
         android:textColor="@color/Text_Color"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
@@ -43,6 +44,7 @@
         style="@style/RoundedEditText"
         android:text="Contraseña"
         android:textColor="@color/Text_Color"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
@@ -52,10 +54,10 @@
     <Button
         android:id="@+id/Btn1_Login"
         android:layout_width="250dp"
-        android:layout_height="48dp"
+        android:layout_height="51dp"
        android:layout_marginTop="20dp"
         android:backgroundTint="@color/ButtonAccion_Color"
-        android:text="iniciar sesion"
+        android:text="Iniciar Sesión"
         android:textColor="@android:color/white"
         android:textSize="18dp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -72,6 +74,7 @@
         android:textColor="@color/ButtonAccion_Color"
         android:text="¿Olvidaste tu Contraseña?"
         android:textSize="17dp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
@@ -82,35 +85,50 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="92dp"
-        android:text="━━━━━━━━━━━━━━━━━   O   ━━━━━━━━━━━━━━━━━"
+        android:text="━━━━━━━━━━━━   O   ━━━━━━━━━━━━"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/TXV1_OlvidasteContraseña" />
 
+    <ImageView
+        android:id="@+id/image_google"
+        android:layout_width="80dp"
+        android:layout_height="64.37dp"
+        android:layout_marginTop="592dp"
+        android:src="@drawable/google"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.507"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/TXV3_NoCuenta"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="44dp"
-        android:text="¿No tienes cuenta?"
+        android:text="¿No tienes una cuenta?"
         android:textSize="18dp"
+        android:textColor="@color/Text_Color"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.244"
         app:layout_constraintStart_toStartOf="parent" />
+
+
 
     <TextView
         android:id="@+id/TXV4_Registrate"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="44dp"
-        android:text="Registrate!"
+        android:text="Regístrate"
         android:textColor="@color/ButtonAccion_Color"
         android:textSize="17dp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.731"
+        app:layout_constraintHorizontal_bias="0.868"
         app:layout_constraintStart_toStartOf="@id/TXV3_NoCuenta" />
 
 

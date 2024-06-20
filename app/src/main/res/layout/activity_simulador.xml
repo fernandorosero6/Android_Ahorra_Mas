@@ -7,8 +7,9 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:layout_margin="24dp"
-    tools:context=".AgregarActivity">
+    android:padding="24dp"
+    tools:context=".AgregarActivity"
+    android:background="@color/white"   >
 
 
     <LinearLayout
@@ -106,7 +107,8 @@
         android:layout_height="55dp"
         android:layout_gravity="center_horizontal"
         android:text="Calcular"
-        android:textColor="#FFFFFF" />
+        android:textColor="#FFFFFF"
+        android:backgroundTint="@color/ButtonAccion_Color"/>
 
     <ImageView
         android:id="@+id/logo"

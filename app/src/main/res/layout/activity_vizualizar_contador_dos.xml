@@ -6,8 +6,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:layout_margin="24dp"
-
+    android:padding="24dp"
+    android:background="@color/white"
     tools:context=".vizualizar_Contador_dos">
 
 
@@ -24,8 +24,8 @@
 
         <ImageView
             android:id="@+id/imageView"
-            android:layout_width="120dp"
-            android:layout_height="120dp"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
             android:src="@drawable/contador1" />
 
         <LinearLayout
@@ -45,74 +45,151 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
-            <ImageButton
-                android:id="@+id/imageButton"
-                android:layout_width="wrap_content"
-                android:layout_height="65dp"
-                android:layout_gravity="right"
-                app:srcCompat="@android:drawable/ic_menu_edit" />
 
-            <TextView
+            <Button
+                android:id="@+id/btEditar"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_gravity="left"
-                android:text="Editar "
-                android:textSize="30sp"
+                android:backgroundTint="@color/BackgroundText_Color"
+                android:text="  Editar"
+                android:textColor="@color/ButtonGris"
                 android:textStyle="bold"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                android:layout_marginVertical="10dp"
+               android:layout_marginHorizontal="30dp"
+                android:textSize="18sp"
+                android:drawableLeft="@drawable/editar"
 
+                />
         </LinearLayout>
     </LinearLayout>
 
 
 
     <LinearLayout
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:gravity="center"
         android:orientation="vertical"
-        android:layout_margin="24dp">
+        android:layout_gravity="center">
+
+        <LinearLayout
+            android:layout_width="337dp"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="5dp"
+            android:layout_weight="1"
+            android:orientation="horizontal">
 
 
+            <TextView
+                android:layout_width="176dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="Número de Contador"
+                android:textSize="20sp"
+                android:textStyle="normal" />
 
-        <EditText
-            android:id="@+id/numeroContador"
-            android:layout_width="257dp"
-            android:layout_height="34.37dp"
-            android:hint="Número de Contador"
 
-            android:layout_margin="10dp"
-            android:background="#8D8B8C89"
-            android:inputType="number" />
+            <EditText
+                android:id="@+id/numeroContador"
+                style="@style/RoundedEditText"
+                android:layout_width="154dp"
+                android:layout_height="48dp"
+                android:hint="   55220"
+                android:inputType="number"
+                android:textSize="20dp" />
 
-        <EditText
-            android:id="@+id/barrio"
-            android:layout_width="257dp"
-            android:layout_height="34.37dp"
-            android:background="#8D8B8C89"
-            android:hint="Barrio"
-            android:textColor="@color/black"
-            android:inputType="number" />
 
-        <EditText
-            android:id="@+id/direccion"
-            android:layout_width="257dp"
-            android:layout_height="34.37dp"
-            android:background="#8D8B8C89"
-            android:hint="Dirección"
-            android:layout_margin="10dp"
-            android:inputType="number" />
+        </LinearLayout>
 
-        <EditText
-            android:id="@+id/nombreContador"
-            android:layout_width="257dp"
-            android:layout_height="34.37dp"
-            android:hint="Estrato"
-            android:background="#8D8B8C89"
-            android:inputType="text" />
+        <LinearLayout
+            android:layout_width="337dp"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="5dp"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+
+            <TextView
+                android:layout_width="176dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="Barrio"
+                android:textSize="20sp"
+                android:textStyle="normal" />
+
+
+            <EditText
+                android:id="@+id/barrio"
+                style="@style/RoundedEditText"
+                android:layout_width="154dp"
+                android:layout_height="48dp"
+                android:hint="   Cadillal"
+                android:inputType="number"
+                android:textSize="20dp"
+
+                />
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="337dp"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="5dp"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+
+            <TextView
+                android:layout_width="174dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="Dirección"
+                android:textSize="20sp"
+                android:textStyle="normal" />
+
+
+            <EditText
+                android:id="@+id/direccion"
+                style="@style/RoundedEditText"
+                android:layout_width="154dp"
+                android:layout_height="48dp"
+                android:hint="   Cra 10"
+                android:inputType="number"
+                android:textSize="20dp" />
+
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="337dp"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="5dp"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+
+            <TextView
+                android:layout_width="176dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="Estrato"
+                android:textSize="20sp"
+                android:textStyle="normal" />
+
+
+            <EditText
+                android:id="@+id/estrato"
+                style="@style/RoundedEditText"
+                android:layout_width="154dp"
+                android:layout_height="48dp"
+                android:hint="   3"
+                android:inputType="number"
+                android:textSize="20dp"
+
+                />
+
+
+        </LinearLayout>
 
 
 
@@ -127,22 +204,12 @@
 
 
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="41dp"
-            android:layout_gravity="center"
-            android:text="Estado     "
-            android:textSize="18sp"
-            android:textStyle="bold"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <com.google.android.material.chip.Chip
-            android:id="@+id/chip"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+        <Switch
+            android:id="@+id/switchEstado"
+            android:layout_width="107dp"
+            android:layout_height="48dp"
+            android:layout_gravity="center_horizontal"
+            android:text="Estado" />
 
 
 
@@ -154,8 +221,8 @@
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        android:layout_gravity="center">
 
         <ImageView
             android:layout_width="100dp"
@@ -167,98 +234,93 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:layout_marginHorizontal="15dp">
 
-            <TextView
-                android:layout_gravity="left"
-                android:layout_width="160dp"
-                android:layout_height="20dp"
-                android:text="  Alerta Alta: 200 "
-                android:textSize="16sp"
-                android:textStyle="normal"
-
-                />
-
-            <Space
-                android:layout_width="16dp"
-                android:layout_height="wrap_content" />
-
-            <TextView
-                android:layout_gravity="left"
-                android:layout_width="160dp"
-                android:layout_height="20dp"
-                android:text="  Alerta Media: 450 "
-                android:textSize="16sp"
-                android:textStyle="normal"
-
-                />
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left"
+                    android:text="Alta:"
+                    android:textSize="18sp"
+                    android:textStyle="normal" />
 
 
-            <Space
-                android:layout_width="16dp"
-                android:layout_height="wrap_content" />
+            </LinearLayout>
 
-            <TextView
-                android:layout_gravity="left"
-                android:layout_width="160dp"
-                android:layout_height="20dp"
-                android:text="  Alerta Temprana:300 "
-                android:textSize="16sp"
-                android:textStyle="normal"
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginVertical="10dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left"
+                    android:text="Media:"
+                    android:textSize="18sp"
+                    android:textStyle="normal" />
 
-                />
 
 
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left"
+                    android:text="Temprana:"
+                    android:textSize="18sp"
+                    android:textStyle="normal" />
+
+
+
+            </LinearLayout>
 
         </LinearLayout>
 
-
-
-
-
-
     </LinearLayout>
 
-    <Space
-        android:layout_width="400dp"
-        android:layout_height="20dp" />
 
     <LinearLayout
-        android:layout_width="match_parent"
+        android:layout_width="259dp"
         android:layout_height="wrap_content"
-        android:gravity="center"
-        android:orientation="horizontal">
+        android:layout_gravity="center"
+        android:orientation="horizontal"
+        android:layout_marginTop="10dp">
 
-        <com.google.android.material.floatingactionbutton.FloatingActionButton
-            android:id="@+id/floatingActionButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:clickable="true"
-            app:srcCompat="@drawable/agregarnoti" />
+        <ImageView
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:src="@drawable/agregarnoti" />
+        <Space
+            android:layout_width="16dp"
+            android:layout_height="wrap_content" />
 
         <TextView
             android:layout_width="wrap_content"
-            android:layout_height="41dp"
+            android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:text="Agregar Notificación"
-            android:textSize="30sp"
-            android:textStyle="bold"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-
-
-
+            android:text="Agregar notificación"
+            android:textSize="20sp"
+            android:textStyle="bold" />
     </LinearLayout>
 
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
+        android:layout_marginVertical="10dp"
         android:gravity="center"
         android:orientation="horizontal">
 
@@ -266,7 +328,7 @@
             android:id="@+id/btEliminar"
             android:layout_width="200dp"
             android:layout_height="60dp"
-            android:backgroundTint="#B0D892"
+            android:backgroundTint="@color/ButtonGris"
             android:text="Eliminar Contador"
             android:textSize="18sp"
 
@@ -275,26 +337,13 @@
 
     </LinearLayout>
 
-    <Space
-        android:layout_width="400dp"
-        android:layout_height="140dp" />
-
-    <LinearLayout
-
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:orientation="horizontal">
 
         <ImageView
             android:id="@+id/logoAhorra"
-            android:layout_width="120dp"
-            android:layout_height="120dp"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_gravity="center"
             android:src="@drawable/logo_este_s_" />
-
-
-    </LinearLayout>
-
 
 
 </LinearLayout>
