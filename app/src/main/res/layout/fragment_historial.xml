@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".historial.HistorialFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/Icon_colorClaro"
+            android:elevation="4dp"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+            app:titleTextColor="@android:color/black" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="20dp">
+
+            <ImageView
+                android:id="@+id/IV_Historia"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:src="@drawable/historial" />
+
+            <TextView
+                android:id="@+id/TXV_HistorialDeConsumo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Historial de consumo"
+                android:textSize="35sp"
+                android:textStyle="normal"
+                android:paddingVertical="10dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="20dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingHorizontal="16dp"
+            android:layout_marginTop="16dp">
+
+            <Spinner
+                android:id="@+id/SP_OpcionesHistorial"
+                android:layout_width="match_parent"
+                android:layout_height="48dp" />
+
+            <androidx.fragment.app.FragmentContainerView
+                android:id="@+id/fragmentContainer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp" />
+
+            <Button
+                android:id="@+id/Btn_HistorialSemanal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:backgroundTint="@color/ButtonAccion_Color"
+                android:text="Semanal"
+                android:textSize="18sp" />
+
+            <Button
+                android:id="@+id/Btn_HistorialMensual"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:backgroundTint="@color/ButtonAccion_Color"
+                android:text="Mensual"
+                android:textSize="18sp" />
+
+            <Button
+                android:id="@+id/Btn_HistorialAnual"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:backgroundTint="@color/ButtonAccion_Color"
+                android:text="Anual"
+                android:textSize="18sp" />
+        </LinearLayout>
+    </LinearLayout>
+</FrameLayout>

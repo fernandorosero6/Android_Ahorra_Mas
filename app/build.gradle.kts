@@ -1,6 +1,7 @@
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.jetbrains.kotlin.android)
+
 }
 
 android {
@@ -53,12 +54,32 @@ android {
     }
 
     buildFeatures {
-        viewBinding = true
+        viewBinding =true
+
     }
 
 }
 
+
 dependencies {
+
+
+
+    implementation ("com.squareup.retrofit2:retrofit:2.9.0")
+    implementation ("com.squareup.retrofit2:converter-scalars:2.9.0")
+    implementation ("com.squareup.retrofit2:converter-gson:2.9.0")
+    implementation ("com.squareup.okhttp3:okhttp:4.9.3")
+    implementation ("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.3.6")
+    implementation ("com.google.code.gson:gson:2.9.1")
+
+    //implementation("com.github.PhilJay:MPAndroidChart:v3.1.0")
+
+    //implementation("com.github.mikephil.charting:mpandroidchart:v3.1.0")
+
+    //implementation("com.jjoe64:graphview:4.2.2")
+
+   // implementation("com.anychart:anychart-android:8.6.0'")
+
 
     //implementation 'com.google.android.material:material:1.3.0' // o la última versión
     //implementation 'androidx.appcompat:appcompat:1.2.0' // o la última versión
@@ -73,6 +94,8 @@ dependencies {
     implementation(libs.navigation.ui.ktx)
     implementation(libs.androidx.lifecycle.livedata.ktx)
     implementation(libs.androidx.lifecycle.viewmodel.ktx)
+    implementation(libs.firebase.firestore.ktx)
+    implementation(libs.firebase.crashlytics.buildtools)
     annotationProcessor (libs.compiler)
     implementation (libs.androidx.core.splashscreen)
     implementation(libs.androidx.core.ktx)
@@ -96,4 +119,5 @@ dependencies {
     androidTestImplementation(libs.androidx.ui.test.junit4)
     debugImplementation(libs.androidx.ui.tooling)
     debugImplementation(libs.androidx.ui.test.manifest)
+
 }

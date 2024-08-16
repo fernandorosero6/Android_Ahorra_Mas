@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".reportes.Asunto_Reporte">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="847dp"
+        android:orientation="vertical"
+        >
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/Icon_colorClaro"
+            android:elevation="4dp"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+            app:titleTextColor="@android:color/black" />
+
+
+
+
+
+
+        <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+            android:padding="24dp"
+        >
+
+        <ImageView
+
+            android:id="@+id/imageView"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/icono_da_os_1" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+
+            <TextView
+                android:layout_width="200dp"
+                android:layout_height="103dp"
+                android:layout_gravity="center"
+                android:text="Reporte de Daños"
+                android:textSize="30dp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="Asunto Reporte"
+        android:textSize="32dp"
+        android:textStyle="bold"
+        android:layout_marginVertical="10dp"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:orientation="vertical">
+
+
+
+        <Spinner
+            android:id="@+id/spiAsunto"
+            android:layout_width="300dp"
+            android:layout_height="48dp"
+            android:layout_margin="5dp"
+            android:backgroundTint="@color/black"
+
+            />
+
+        <Spinner
+            android:id="@+id/spiElegir"
+            android:layout_width="300dp"
+            android:layout_height="48dp"
+            android:layout_margin="5dp"
+            android:backgroundTint="@color/black"
+
+            />
+
+    </LinearLayout>
+
+
+        <EditText
+            android:id="@+id/descripcionReporte"
+            android:layout_width="314dp"
+            android:layout_height="150dp"
+            android:layout_gravity="center"
+            android:layout_marginVertical="10dp"
+            android:background="#36E4E2DB"
+            android:ems="10"
+            android:gravity="start|top"
+            android:hint="Describe lo sucedido ..."
+            android:inputType="textMultiLine"
+            android:textSize="20dp" />
+
+
+
+        <Button
+            android:id="@+id/btEnviar"
+            android:layout_width="250dp"
+            android:layout_height="60dp"
+            android:layout_gravity="center"
+            android:layout_margin="10dp"
+            android:backgroundTint="#B0D892"
+            android:text="Enviar"
+            android:textSize="20sp"
+
+            />
+
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_gravity="center"
+        android:layout_marginVertical="40dp"
+        android:src="@drawable/logo_este_s_" />
+
+
+</LinearLayout>
+
+
+
+
+
+    </FrameLayout>

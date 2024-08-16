@@ -1,0 +1,296 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".contador.SimulacionFragment">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="847dp"
+        android:orientation="vertical">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/Icon_colorClaro"
+            android:elevation="4dp"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+            app:titleTextColor="@android:color/black" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="847dp"
+        android:orientation="vertical"
+        android:paddingVertical="40dp">
+
+
+        <ImageButton
+            android:id="@+id/btnEliminar1"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:background="@color/white"
+            android:contentDescription="Eliminar ítem"
+            android:minWidth="48dp"
+            android:minHeight="48dp"
+            android:layout_marginLeft="350dp"
+            android:src="@drawable/close_cerrar" />
+
+        <TextView
+        android:layout_width="232dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="Simulador"
+        android:textSize="40sp"
+        android:textStyle="bold"
+        android:layout_margin="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_gravity="center">
+
+        <LinearLayout
+            android:layout_width="337dp"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="5dp"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+
+            <TextView
+                android:layout_width="176dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="Valor a gastar"
+                android:textSize="20sp"
+                android:textStyle="normal" />
+
+
+            <EditText
+                android:id="@+id/valorSimulacion"
+                style="@style/RoundedEditText"
+                android:layout_width="154dp"
+                android:layout_height="48dp"
+                android:hint="   Valor"
+                android:inputType="number"
+                android:textSize="20dp" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="337dp"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="5dp"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+
+            <TextView
+                android:layout_width="176dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="Consumo"
+                android:textSize="20sp"
+                android:textStyle="normal" />
+
+
+            <EditText
+                android:id="@+id/consumoSimulacion"
+                style="@style/RoundedEditText"
+                android:layout_width="154dp"
+                android:layout_height="48dp"
+                android:hint="   m³"
+                android:inputType="number"
+                android:textSize="20dp"
+
+                />
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="337dp"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="5dp"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+
+            <TextView
+                android:layout_width="174dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="Consumo promedio de tu lugar de residencia"
+                android:textSize="20sp"
+                android:textStyle="normal" />
+
+
+            <EditText
+                android:id="@+id/consumoPromedioSimulacion"
+                style="@style/RoundedEditText"
+                android:layout_width="154dp"
+                android:layout_height="48dp"
+                android:hint="   m³"
+                android:inputType="number"
+                android:textSize="20dp" />
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="━━━━━━━━━━━━━━━━━━━━━"
+        android:textSize="20sp"
+        android:textColor="@color/ButtonGris"
+        android:layout_margin="10dp"
+        />
+
+    <LinearLayout
+        android:layout_width="335dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_gravity="center">
+
+        <LinearLayout
+            android:layout_width="337dp"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="5dp"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+
+            <TextView
+                android:layout_width="176dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="Agua"
+                android:textSize="20sp"
+                android:textStyle="normal" />
+
+
+            <EditText
+                android:id="@+id/valorAgua"
+                style="@style/RoundedEditText"
+                android:layout_width="154dp"
+                android:layout_height="48dp"
+
+                android:hint="   Valor"
+                android:inputType="number"
+                android:textSize="20dp" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="337dp"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="5dp"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+
+            <TextView
+                android:layout_width="176dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="Alcantarillado"
+                android:textSize="20sp"
+                android:textStyle="normal" />
+
+
+            <EditText
+                android:id="@+id/valorAlcantarillado"
+                style="@style/RoundedEditText"
+                android:layout_width="154dp"
+                android:layout_height="48dp"
+                android:hint="   Valor"
+                android:inputType="number"
+                android:textSize="20dp"
+
+                />
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="337dp"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="5dp"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+
+            <TextView
+                android:layout_width="174dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="Cargo Fijo"
+                android:textSize="20sp"
+                android:textStyle="normal" />
+
+
+            <EditText
+                android:id="@+id/valorCargoFijo"
+                style="@style/RoundedEditText"
+                android:layout_width="154dp"
+                android:layout_height="48dp"
+                android:hint="   Valor"
+                android:inputType="number"
+                android:textSize="20dp" />
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btnCrearPresupuesto"
+        android:layout_width="152dp"
+        android:layout_height="77dp"
+        android:layout_gravity="center_horizontal"
+        android:backgroundTint="@color/ButtonAccion_Color"
+        android:text="Crear Presupuesto"
+        android:textColor="#FFFFFF"
+        android:textSize="16dp"
+        android:layout_margin="10dp"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="116dp"
+        tools:layout_editor_absoluteY="613dp" />
+
+    </LinearLayout>
+
+
+    </LinearLayout>
+
+    <!-- NavigationView (Menú deslizante)
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/navView"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        app:headerLayout="@layout/nav_header_menu_hamburguesa"
+        app:menu="@menu/drawer_menu"/>
+        -->
+
+</FrameLayout>

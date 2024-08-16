@@ -1,0 +1,434 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".contador.EditarContadorFragment">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="847dp"
+        android:orientation="vertical">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/Icon_colorClaro"
+            android:elevation="4dp"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+          />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingHorizontal="20dp"
+            android:paddingVertical="10dp"
+            >
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:src="@drawable/contador1" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+
+                <TextView
+                    android:layout_width="232dp"
+                    android:layout_height="41dp"
+                    android:layout_gravity="right"
+                    android:text="Contador "
+                    android:textSize="35sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="232dp"
+                    android:layout_height="41dp"
+                    android:layout_gravity="right"
+                    android:text="Estado : Activo "
+                    android:textSize="24sp"
+                    android:textStyle="normal" />
+
+
+
+            </LinearLayout>
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="10dp"
+            android:padding="10dp">
+
+
+        </LinearLayout>
+
+
+
+
+
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="337dp"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="5dp"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+
+
+                <TextView
+                    android:layout_width="176dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="Nombre"
+                    android:textSize="20sp"
+                    android:textStyle="normal" />
+
+
+                <EditText
+                    android:id="@+id/numContador"
+                    style="@style/RoundedEditText"
+                    android:layout_width="154dp"
+                    android:layout_height="48dp"
+                    android:hint="   "
+                    android:inputType="number"
+                    android:textSize="20dp" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="337dp"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="5dp"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+
+
+                <TextView
+                    android:layout_width="176dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="Matrícula"
+                    android:textSize="20sp"
+                    android:textStyle="normal" />
+
+
+                <EditText
+                    android:id="@+id/matricula"
+                    style="@style/RoundedEditText"
+                    android:layout_width="154dp"
+                    android:layout_height="48dp"
+                    android:hint="   "
+                    android:inputType="number"
+                    android:textSize="20dp" />
+
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="337dp"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="5dp"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+
+                <TextView
+                    android:layout_width="176dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="Barrio"
+                    android:textSize="20sp"
+                    android:textStyle="normal" />
+
+
+                <EditText
+                    android:id="@+id/barrio"
+                    style="@style/RoundedEditText"
+                    android:layout_width="154dp"
+                    android:layout_height="48dp"
+                    android:hint="   Cadillal"
+                    android:inputType="number"
+                    android:textSize="20dp"
+
+                    />
+
+
+            </LinearLayout>
+
+
+            /<LinearLayout
+            android:layout_width="337dp"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="5dp"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+
+
+            <TextView
+                android:layout_width="176dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="Dirección"
+                android:textSize="20sp"
+                android:textStyle="normal" />
+
+
+            <EditText
+                android:id="@+id/direccion"
+                style="@style/RoundedEditText"
+                android:layout_width="154dp"
+                android:layout_height="48dp"
+                android:hint="   "
+                android:inputType="number"
+                android:textSize="20dp" />
+
+
+        </LinearLayout>
+
+
+
+            <LinearLayout
+                android:layout_width="337dp"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="5dp"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+
+
+                <TextView
+                    android:layout_width="176dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="Estrato"
+                    android:textSize="20sp"
+                    android:textStyle="normal" />
+
+
+                <Spinner
+                    android:id="@+id/SP_OpcionesEstrato"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"/>
+
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="337dp"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="5dp"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+
+                <TextView
+                    android:layout_width="174dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="Categoría"
+                    android:textSize="20sp"
+                    android:textStyle="normal" />
+
+
+                <Spinner
+                    android:id="@+id/SP_OpcionesCategoria"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="337dp"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="5dp"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+
+                <TextView
+                    android:layout_width="176dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="Tarifa Agua"
+                    android:textSize="20sp"
+                    android:textStyle="normal" />
+
+                <EditText
+                    android:id="@+id/tarifaAgua"
+                    style="@style/RoundedEditText"
+                    android:layout_width="154dp"
+                    android:layout_height="48dp"
+                    android:hint="   "
+                    android:inputType="number"
+                    android:textSize="20dp" />
+
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="337dp"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="5dp"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+
+
+                <TextView
+                    android:layout_width="176dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="Tarifa Alcantarillado"
+                    android:textSize="20sp"
+                    android:textStyle="normal" />
+
+
+                <EditText
+                    android:id="@+id/tarifaAlcan"
+                    style="@style/RoundedEditText"
+                    android:layout_width="154dp"
+                    android:layout_height="48dp"
+                    android:hint="   "
+                    android:inputType="number"
+                    android:textSize="20dp" />
+
+
+            </LinearLayout>
+
+
+
+
+            <LinearLayout
+                android:layout_width="337dp"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="5dp"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+
+                <TextView
+                    android:layout_width="176dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="último Consumo"
+                    android:textSize="20sp"
+                    android:textStyle="normal" />
+
+
+                <EditText
+                    android:id="@+id/ultconsumo"
+                    style="@style/RoundedEditText"
+                    android:layout_width="154dp"
+                    android:layout_height="48dp"
+                    android:hint="   3"
+                    android:inputType="number"
+                    android:textSize="20dp"
+
+                    />
+
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="337dp"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="5dp"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+
+                <TextView
+                    android:layout_width="176dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="Fecha próximo pago"
+                    android:textSize="20sp"
+                    android:textStyle="normal" />
+
+
+                <EditText
+                    android:id="@+id/proximoPago"
+                    style="@style/RoundedEditText"
+                    android:layout_width="154dp"
+                    android:layout_height="48dp"
+                    android:hint="   "
+                    android:inputType="number"
+                    android:textSize="20dp"
+
+                    />
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="horizontal">
+
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/btnGuardar"
+                        android:layout_width="125dp"
+                        android:layout_height="55dp"
+                        android:backgroundTint="@color/ButtonAccion_Color"
+                        android:text="Aceptar"
+                        android:textColor="#FFFFFF" />
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+
+</FrameLayout>

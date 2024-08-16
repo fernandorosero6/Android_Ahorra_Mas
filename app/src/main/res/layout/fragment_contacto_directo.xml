@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".BlankFragment">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="847dp"
+        android:orientation="vertical"
+        >
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/Icon_colorClaro"
+            android:elevation="4dp"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+            app:titleTextColor="@android:color/black" />
+
+
+
+
+
+
+        <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+            android:padding="24dp"
+        >
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/icono_da_os_1" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="200dp"
+                android:layout_height="103dp"
+                android:layout_gravity="center"
+                android:text="Reporte de Daños"
+                android:textSize="30sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:layout_gravity="center"
+        android:text="Contacto Directo"
+        android:textSize="32dp"
+        android:textStyle="bold"
+        android:layout_margin="15dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:orientation="vertical">
+
+
+
+        <Button
+            android:id="@+id/btnPrograma"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:text="Programar Llamada"
+            android:textSize="20dp"
+            android:layout_marginVertical="10dp"
+            android:padding="10dp"
+            android:backgroundTint="#B0D892"
+            tools:layout_editor_absoluteX="300dp"
+            tools:layout_editor_absoluteY="560dp" />
+
+
+        <Button
+            android:id="@+id/BtnLlamar"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:text="Llamar"
+            android:textSize="20dp"
+            android:layout_marginVertical="10dp"
+            android:padding="10dp"
+            android:backgroundTint="#B0D892"
+            tools:layout_editor_absoluteX="179dp"
+            tools:layout_editor_absoluteY="624dp" />
+
+
+
+    </LinearLayout>
+
+
+    <ImageView
+        android:id="@+id/logoAhorra"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_gravity="center"
+        android:layout_marginVertical="200dp"
+        android:src="@drawable/logo" />
+
+    </LinearLayout>
+
+
+
+    <!-- NavigationView (Menú deslizante)
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/navView"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        app:headerLayout="@layout/nav_header_menu_hamburguesa"
+        app:menu="@menu/drawer_menu"/>
+        -->
+
+</FrameLayout>

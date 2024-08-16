@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".reportes.Reporte_De_Danos">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="847dp"
+        android:orientation="vertical">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/Icon_colorClaro"
+            android:elevation="4dp"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+            app:titleTextColor="@android:color/black" />
+
+
+
+
+
+        <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+            android:padding="20dp"
+        >
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/icono_da_os_1" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="200dp"
+                android:layout_height="103dp"
+                android:layout_gravity="center"
+                android:text="Reporte de Daños"
+                android:textSize="30dp"
+                android:textStyle="normal"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="Daños"
+        android:textSize="40sp"
+        android:textStyle="bold"
+        android:padding="15dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:orientation="vertical">
+
+
+
+        <Button
+            android:id="@+id/btnRepor"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:text="Reportes"
+            android:textSize="20dp"
+            android:backgroundTint="#B0D892"
+            tools:layout_editor_absoluteX="300dp"
+            tools:layout_editor_absoluteY="560dp" />
+
+
+
+        <Button
+            android:id="@+id/Btn_Histo"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:text="Historial de Daños"
+            android:textSize="20dp"
+            android:layout_marginVertical="10dp"
+            android:backgroundTint="#B0D892"
+            tools:layout_editor_absoluteX="179dp"
+            tools:layout_editor_absoluteY="624dp" />
+
+
+        <Button
+            android:id="@+id/btnContacto"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:text="Contácto Directo"
+            android:textSize="20dp"
+            android:backgroundTint="#B0D892"
+            tools:layout_editor_absoluteX="179dp"
+            tools:layout_editor_absoluteY="699dp" />
+
+
+
+    </LinearLayout>
+
+
+        <ImageView
+            android:id="@+id/logoAhorra"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_gravity="center"
+            android:layout_marginVertical="200dp"
+            android:src="@drawable/logo_este_s_" />
+
+
+    </LinearLayout>
+
+    <!-- NavigationView (Menú deslizante)
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/navView"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        app:headerLayout="@layout/nav_header_menu_hamburguesa"
+        app:menu="@menu/drawer_menu"/>
+        -->
+
+</FrameLayout>

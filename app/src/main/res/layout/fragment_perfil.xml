@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/fragment_perfil"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".perfil.PerfilFragment"
+    android:background="@color/white">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="847dp"
+        android:orientation="vertical">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/Icon_colorClaro"
+            android:elevation="4dp"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+            app:titleTextColor="@android:color/black" />
+
+
+
+
+        <ImageView
+        android:id="@+id/IV_FotoPerfil"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_marginTop="50dp"
+            android:layout_gravity="center"
+        android:src="@drawable/selfie"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/TV_InforamcionPerfil"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Informacion Personal"
+        android:layout_gravity="center"
+        android:textSize="25dp"
+        android:textStyle="normal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/IV_FotoPerfil"
+        />
+
+    <Button
+        android:id="@+id/btnDatosPerfil"
+        android:layout_width="300dp"
+        android:layout_height="52dp"
+        android:layout_marginTop="20dp"
+        android:layout_gravity="center"
+        android:backgroundTint="@color/Icon_colorClaro"
+        android:paddingStart="15dp"
+        android:text="Datos Personales"
+        android:textColor="@color/Text_Color"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/TV_InforamcionPerfil" />
+
+    <Button
+        android:id="@+id/btnSeguridad"
+        android:layout_width="300dp"
+        android:layout_height="52dp"
+        android:layout_marginTop="20dp"
+        android:layout_gravity="center"
+        android:backgroundTint="@color/BackgroundText_Color"
+        android:paddingStart="15dp"
+        android:text="Seguirdad"
+        android:textColor="@color/Text_Color"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.504"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Btn_DatosPersonalesPerfil" />
+
+
+
+        <ImageView
+            android:id="@+id/image_view_Login"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_marginTop="200dp"
+            android:layout_gravity="center"
+            android:src="@drawable/logo"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.496"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </LinearLayout>
+
+
+    <!-- NavigationView (Menú deslizante)
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/navView"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        app:headerLayout="@layout/nav_header_menu_hamburguesa"
+        app:menu="@menu/drawer_menu"/>
+        -->
+
+</FrameLayout>

@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".perfil.DatosFragment">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="847dp"
+        android:orientation="vertical"
+        >
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/Icon_colorClaro"
+            android:elevation="4dp"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+            app:titleTextColor="@android:color/black" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_gravity="center"
+        android:paddingHorizontal="60dp"
+        >
+
+        <ImageView
+            android:id="@+id/IV_FotoPerfil"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="50dp"
+            android:src="@drawable/selfie"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.496"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+        android:id="@+id/TV_InformcionPerfil"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Informacion Personal"
+        android:textSize="30dp"
+            android:textStyle="normal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/IV_FotoPerfil"
+        app:layout_constraintBottom_toTopOf="@+id/ET_NombrePerfil"/>
+
+    <TextView
+        android:id="@+id/TV_NombrePerfil"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Nombre"
+        android:textSize="18dp"
+        android:paddingVertical="5dp"
+        app:layout_constraintBottom_toTopOf="@+id/ET_NombrePerfil"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.465"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/TV_InforamcionPerfil"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <EditText
+        android:id="@+id/ET_NombrePerfil"
+        style="@style/RoundedEditText"
+        android:layout_width="300dp"
+        android:layout_height="48dp"
+        android:background="@color/BackgroundText_Color"
+        android:paddingStart="15dp"
+        android:text="Maria Alejandra"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/TV_InforamcionPerfil" />
+
+    <TextView
+        android:id="@+id/TV_ApellidosPerfil"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Apellido"
+        android:textSize="18dp"
+        android:paddingVertical="5dp"
+        app:layout_constraintBottom_toTopOf="@+id/ET_ApellidoPerfil"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.471"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ET_NombrePerfil"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <EditText
+        android:id="@+id/ET_ApellidoPerfil"
+        style="@style/RoundedEditText"
+        android:layout_width="300dp"
+        android:layout_height="48dp"
+        android:background="@color/BackgroundText_Color"
+        android:paddingStart="15dp"
+        android:text="Muñoz Martinez"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ET_NombrePerfil" />
+
+        <TextView
+            android:id="@+id/TV_nombreUsuario"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Nombre de usuario"
+            android:textSize="18dp"
+            android:paddingVertical="5dp"
+            app:layout_constraintBottom_toTopOf="@+id/ET_ApellidoPerfil"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.471"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ET_NombrePerfil"
+            app:layout_constraintVertical_bias="1.0" />
+
+        <EditText
+            android:id="@+id/ET_nombreUsuario"
+            style="@style/RoundedEditText"
+            android:layout_width="300dp"
+            android:layout_height="48dp"
+            android:background="@color/BackgroundText_Color"
+            android:paddingStart="15dp"
+            android:text="Maria Muñoz"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.495"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ET_NombrePerfil" />
+
+
+        <TextView
+        android:id="@+id/TV_IdentificacionPerfil"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Identificacion"
+        android:textSize="18dp"
+        android:paddingVertical="5dp"
+        app:layout_constraintBottom_toTopOf="@+id/ET_IdentificacionPerfil"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.493"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ET_ApellidoPerfil"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <EditText
+        android:id="@+id/ET_IdentificacionPerfil"
+        android:layout_width="300dp"
+        android:layout_height="48dp"
+        android:background="@color/BackgroundText_Color"
+        android:paddingStart="15dp"
+        android:text="102514535"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.522"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ET_ApellidoPerfil" />
+
+
+    <TextView
+        android:id="@+id/TV_FechaNacimientoPerfil"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Fecha de Nacimiento"
+        android:textSize="18dp"
+        android:paddingVertical="5dp"
+        app:layout_constraintBottom_toTopOf="@+id/ET_FechaNacimientoPerfil"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.486"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ET_IdentificacionPerfil"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <EditText
+        android:id="@+id/ET_FechaNacimientoPerfil"
+        android:layout_width="300dp"
+        android:layout_height="48dp"
+        android:background="@color/BackgroundText_Color"
+        android:paddingStart="15dp"
+        android:text="2/02/1998"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.522"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ET_IdentificacionPerfil" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Guardar"
+        android:layout_marginTop="20dp"
+        android:layout_gravity="center"
+        android:backgroundTint="@color/ButtonAccion_Color"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ET_FechaNacimientoPerfil"
+        />
+
+    </LinearLayout>
+    </LinearLayout>
+
+
+
+    <!-- NavigationView (Menú deslizante)
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/navView"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        app:headerLayout="@layout/nav_header_menu_hamburguesa"
+        app:menu="@menu/drawer_menu"/>
+        -->
+
+</FrameLayout>

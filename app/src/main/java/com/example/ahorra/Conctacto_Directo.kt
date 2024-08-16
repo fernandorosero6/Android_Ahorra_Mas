@@ -1,26 +1,28 @@
 package com.example.ahorra
 
 import android.os.Bundle
-import androidx.activity.enableEdgeToEdge
-import androidx.appcompat.app.AppCompatActivity
-import com.example.ahorra.databinding.ActivityConctactoDirectoBinding
+import androidx.fragment.app.Fragment
 
-class Conctacto_Directo : AppCompatActivity() {
-    private lateinit var binding: ActivityConctactoDirectoBinding
+// TODO: Rename parameter arguments, choose names that match
+// the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
+private const val ARG_PARAM1 = "param1"
+private const val ARG_PARAM2 = "param2"
+
+/**
+ * A simple [Fragment] subclass.
+ * Use the [BlankFragment.newInstance] factory method to
+ * create an instance of this fragment.
+ */
+class Contacto_Directo : Fragment() {
+    // TODO: Rename and change types of parameters
+    private var param1: String? = null
+    private var param2: String? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        // Habilitar el modo edge-to-edge (asegúrate de tener esta función implementada)
-        enableEdgeToEdge()
-
-        // Inicializar ViewBinding correctamente
-        binding = ActivityConctactoDirectoBinding.inflate(layoutInflater)
-        setContentView(binding.root)
-
-        // Configurar los insets si es necesario
-        binding.root.setOnApplyWindowInsetsListener { view, insets ->
-            // Manejar los insets aquí si es necesario
-            insets
+        arguments?.let {
+            param1 = it.getString(ARG_PARAM1)
+            param2 = it.getString(ARG_PARAM2)
         }
     }
 }

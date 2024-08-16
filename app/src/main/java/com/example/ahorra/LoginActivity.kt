@@ -1,46 +1,79 @@
 package com.example.ahorra
 
-import android.annotation.SuppressLint
 import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
-import android.widget.ImageView
-import android.widget.TextView
-import androidx.activity.enableEdgeToEdge
+import android.widget.EditText
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import androidx.compose.ui.semantics.Role.Companion.Button
-
+import com.example.ahorra.databinding.ActivityLoginBinding
+import com.example.ahorra.ingreso.RecuperarContrasenaFragment1
 
 class LoginActivity : AppCompatActivity() {
-    @SuppressLint("MissingInflatedId")
+
+    private lateinit var edtCoD: EditText
+    private lateinit var edtPassword: EditText
+    private lateinit var btnLogin: Button
+    private lateinit var btnRegist: Button
+    private lateinit var btnContr: Button
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        supportActionBar?.hide() // Oculta la ActionBar de forma segura si no es nula
-        enableEdgeToEdge() // Habilita el borde a borde si estás usando AndroidX Activity
         setContentView(R.layout.activity_login)
 
-        val registerTextView: TextView = findViewById(R.id.TXV4_Registrate)
+        // Inicializa las vistas
+        edtCoD = findViewById(R.id.EDT1)
+        edtPassword = findViewById(R.id.EDT2)
+        btnLogin = findViewById(R.id.Btn1_Login)
+        btnRegist = findViewById(R.id.btnRegistro)
+        btnContr = findViewById(R.id.btnContrasena)
 
-        // Establece un OnClickListener para el botón
-        registerTextView.setOnClickListener {
-            // Inicia la RegisterActivity
-            val intent = Intent(this, RegistroActivity::class.java)
-            startActivity(intent)
+        // Configura los listeners de los botones
+        btnLogin.setOnClickListener {
+            loginFunction()
         }
 
-        val LoginButton: Button = findViewById(R.id.Btn1_Login)
-
-        // Establece un OnClickListener para ir al registro
-
-        LoginButton.setOnClickListener {
-            // Inicia la RegisterActivity
-            val intent = Intent(this, InicioActivity::class.java)
-            startActivity(intent)
-
+        btnRegist.setOnClickListener {
+            registrarfunction()
         }
 
+        btnContr.setOnClickListener {
+            Contrasenafunction()
+        }
+    }
+
+    private fun Contrasenafunction() {
+        // Usa ViewBinding o DataBinding si es necesario
+        val binding: ActivityLoginBinding = ActivityLoginBinding.inflate(layoutInflater)
+        setContentView(binding.root)
+
+        // Maneja el fragmento
+        val fragmentManager = supportFragmentManager
+        val fragmentTransaction = fragmentManager.beginTransaction()
+
+        val fragment = RecuperarContrasenaFragment1()
+        fragmentTransaction.replace(R.id.main, fragment) // Usa replace en lugar de add si quieres reemplazar el fragmento actual
+        fragmentTransaction.addToBackStack(null)
+        fragmentTransaction.commit()
+    }
+
+    private fun registrarfunction() {
+        startActivity(Intent(this, RegistroActivity::class.java))
+    }
+
+    private fun loginFunction() {
+        // Obtén los datos de los campos
+        val email = edtCoD.text.toString().trim()
+        val password = edtPassword.text.toString().trim()
+
+        // Valida que los campos no estén vacíos
+        if (email.isEmpty() || password.isEmpty()) {
+            Toast.makeText(this, "Por favor, ingresa tu correo y contraseña", Toast.LENGTH_SHORT).show()
+            return
+        }
+
+        // Si los campos están completos, continúa con el proceso de inicio de sesión
+        startActivity(Intent(this, InicioActivity::class.java))
+        finish() // Cierra LoginActivity para evitar volver a ella con el botón "Atrás"
     }
 }
-
-
-

@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".presupuesto.AlertaNotifiSimulador">
+
+
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_gravity="center"
+            android:padding="26dp"
+            >
+
+            <TextView
+                android:id="@+id/registroExitoso"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="¡Felicitaciones! Este consumo es MENOR o IGUAL al promedio de tu lugar de residencia."
+                android:textSize="20dp"
+                android:layout_marginVertical="10dp"
+                android:textStyle="normal"
+                android:textColor="@color/Text_Color"
+               />
+
+
+
+            <TextView
+                android:id="@+id/TV_ContraseñaSeguridad"
+                android:layout_width="340dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:text="¿Deseas programar tus alertas?"
+                android:textColor="@color/Text_Color"
+                android:textSize="35dp"
+                android:textStyle="bold" />
+
+
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/btnVolver"
+                    android:layout_width="125dp"
+                    android:layout_height="55dp"
+                    android:text="Rechazar"
+                    android:textColor="#FFFFFF"
+                    android:backgroundTint="@color/ButtonAzul"
+
+                    />
+
+                <Space
+                    android:layout_width="16dp"
+                    android:layout_height="wrap_content" />
+
+                <Button
+                    android:id="@+id/btnGuardar"
+                    android:layout_width="125dp"
+                    android:layout_height="55dp"
+                    android:text="Aceptar"
+                    android:textColor="#FFFFFF"
+                    android:backgroundTint="@color/ButtonAccion_Color"/>
+
+            </LinearLayout>
+        </LinearLayout>
+
+
+
+
+
+
+</FrameLayout>

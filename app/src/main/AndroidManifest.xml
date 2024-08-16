@@ -6,27 +6,20 @@
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@drawable/logo"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Ahorra"
-        tools:targetApi="31">
+        tools:targetApi="31"
+        android:usesCleartextTraffic="true">
         <activity
             android:name=".enviarPregunta_acercadenosotros"
             android:exported="false" />
         <activity
             android:name=".pantalla2_acercadenosotros"
             android:exported="false" />
-        <activity
-            android:name=".AgregarActivity2"
-            android:exported="false" />
-        <activity
-            android:name=".SimuladorActivity"
-            android:exported="false" />
-        <activity
-            android:name=".PresupuestoActivity"
-            android:exported="false" />
+
         <activity
             android:name=".ContrasenaSeguridadActiviy"
             android:exported="false" />
@@ -37,11 +30,8 @@
         <activity
             android:name=".DatosPersonalesActivity"
             android:exported="false" />
-        <activity
-            android:name=".PerfilActivity"
-            android:exported="false" />
-        <activity android:name=".ContadorActivity" />
-        <activity android:name=".AgregarActivity" />
+
+        <activity android:name=".contador.ContadorFragment" />
         <activity
             android:name=".MenuHamburguesa"
             android:exported="false"
@@ -51,39 +41,24 @@
             android:name=".navHeader"
             android:exported="false" />
         <activity
-            android:name=".FragmentoHistorialAnual"
+            android:name=".historial.FragmentoHistorialAnual"
             android:exported="false" />
         <activity
-            android:name=".FragmentoHistorialMensual"
+            android:name=".historial.FragmentoHistorialMensual"
             android:exported="false" />
         <activity
-            android:name=".FragmentoHistorialSemanal"
+            android:name=".historial.FragmentoHistorialSemanal"
             android:exported="false" />
-        <activity android:name=".HistorialActivity" />
+        <activity android:name=".historial.HistorialFragment" />
         <activity
-            android:name=".EliminarContador"
+            android:name=".contador.EliminarContador"
             android:exported="false" />
-        <activity
-            android:name=".Conctacto_Directo"
-            android:exported="false" />
-        <activity
-            android:name=".Asunto_Reporte"
-            android:exported="false" />
-        <activity
-            android:name=".ReporteDeDanosActivity"
-            android:exported="false" />
-        <activity
-            android:name=".vizualizar_Contador_dos"
-            android:exported="false" />
-        <activity
-            android:name=".Vizualizar_Principal"
-            android:exported="false" />
+
         <!--
 <activity
             android:name=".ui.theme.Vizualizar_pricipal"
             android:exported="false" />
-        -->
-        <activity
+        --><activity
             android:name=".LoginActivity"
             android:exported="false" />
         <activity
@@ -103,5 +78,7 @@
             android:name=".InicioActivity"
             android:exported="false" />
     </application>
+
+    <uses-permission android:name="android.permission.INTERNET" />
 
 </manifest>

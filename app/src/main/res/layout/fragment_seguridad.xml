@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".BlankFragment">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="847dp"
+        android:orientation="vertical"
+        >
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/Icon_colorClaro"
+            android:elevation="4dp"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+            app:titleTextColor="@android:color/black" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_gravity="center"
+        android:padding="24dp"
+        >
+
+        <ImageView
+        android:id="@+id/IV_FotoPerfil"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_marginTop="50dp"
+            android:layout_gravity="center"
+        android:src="@drawable/selfie"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <TextView
+        android:id="@+id/TV_ContraseñaSeguridad"
+        android:layout_width="165dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="48dp"
+        android:layout_gravity="center"
+        android:text="Seguridad"
+        android:textSize="27dp"
+        android:textStyle="bold"
+        android:textColor="@color/Text_Color"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/IV_FotoPerfil" />
+
+
+    <EditText
+        android:id="@+id/ET_CorreoSeguridad"
+        android:layout_width="300dp"
+        android:layout_height="52dp"
+        android:layout_marginTop="15dp"
+        android:backgroundTint="@color/BackgroundText_Color"
+        android:layout_gravity="center"
+        android:text="Alexandra@gmail.com"
+        android:drawableRight="@drawable/editar"
+        android:textColor="@color/Text_Color"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.522"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/TV_NombrePerfil" />
+
+    <EditText
+        android:id="@+id/ET_ContraseñaSeguridad"
+        android:layout_width="300dp"
+        android:layout_height="52dp"
+        android:layout_marginTop="20dp"
+        android:backgroundTint="@color/BackgroundText_Color"
+        android:layout_gravity="center"
+        android:text="Contraseña"
+        android:drawableRight="@drawable/editar"
+        android:textColor="@color/Text_Color"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.522"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ET_CorreoSeguridad" />
+
+    <Button
+        android:id="@+id/Btn_GuardarPerfil"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="Guardar"
+        android:layout_marginTop="20dp"
+        android:backgroundTint="@color/ButtonAccion_Color"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ET_ContraseñaSeguridad"
+        />
+
+    </LinearLayout>
+    </LinearLayout>
+
+
+
+    <!-- NavigationView (Menú deslizante)
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/navView"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        app:headerLayout="@layout/nav_header_menu_hamburguesa"
+        app:menu="@menu/drawer_menu"/>
+        -->
+
+</FrameLayout>

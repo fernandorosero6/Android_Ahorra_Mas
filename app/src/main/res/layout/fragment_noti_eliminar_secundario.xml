@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".contador.NotiEliminarSecundario">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_gravity="center"
+            android:padding="5dp"
+            >
+
+
+            <TextView
+                android:id="@+id/TV_ContraseñaSeguridad"
+                android:layout_width="280dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="44dp"
+                android:text="¿Deseas eliminar Contador 2 ?"
+                android:textColor="@color/Text_Color"
+                android:textSize="35dp"
+                android:textStyle="bold" />
+
+
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/btnVolver"
+                    android:layout_width="125dp"
+                    android:layout_height="55dp"
+                    android:text="Deshacer"
+                    android:textColor="#FFFFFF"
+                    android:backgroundTint="@color/ButtonAzul"
+
+                    />
+
+                <Space
+                    android:layout_width="16dp"
+                    android:layout_height="wrap_content" />
+
+                <Button
+                    android:id="@+id/btnGuardar"
+                    android:layout_width="125dp"
+                    android:layout_height="55dp"
+                    android:text="Aceptar"
+                    android:textColor="#FFFFFF"
+                    android:backgroundTint="@color/ButtonAccion_Color"/>
+
+            </LinearLayout>
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+
+</FrameLayout>

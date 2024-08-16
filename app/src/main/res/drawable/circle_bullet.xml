@@ -8,7 +8,7 @@
             android:width="10dp"
             android:height="10dp" />
         <solid
-            android:color="@color/colorPrimary" />
+            android:color="@color/purple_200" />
     </shape>
 
 </selector>

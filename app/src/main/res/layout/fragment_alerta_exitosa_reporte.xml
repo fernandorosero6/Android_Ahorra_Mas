@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="410dp"
+    android:layout_height="300dp"
+    tools:context=".reportes.AlertaExitosaReporte">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_gravity="center"
+        android:padding="26dp">
+
+
+        <TextView
+            android:id="@+id/TVReporte"
+            android:layout_width="340dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:text=" ¡Tu reporte  fue enviado exitosamente !"
+            android:textColor="@color/Text_Color"
+            android:textSize="30dp"
+            android:textStyle="bold" />
+
+
+
+
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+
+            <Button
+                android:id="@+id/btnGuardaInic"
+                android:layout_width="125dp"
+                android:layout_height="55dp"
+                android:text="Aceptar"
+                android:textColor="#FFFFFF"
+                android:backgroundTint="@color/ButtonAccion_Color"/>
+
+        </LinearLayout>
+    </LinearLayout>
+
+
+
+
+
+
+
+</FrameLayout>

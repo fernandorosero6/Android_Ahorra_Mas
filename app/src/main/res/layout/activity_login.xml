@@ -8,7 +8,6 @@
     android:background="@color/white"
     tools:context=".LoginActivity">
 
-
     <ImageView
         android:id="@+id/image_view_Login"
         android:layout_width="170dp"
@@ -26,7 +25,8 @@
         android:layout_height="48dp"
         android:layout_marginTop="20dp"
         android:padding="10dp"
-        android:text="Correo o Documento"
+        android:hint="Correo electrónico"
+        android:text=""
         android:textColor="@color/Text_Color"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
@@ -35,6 +35,8 @@
         app:layout_constraintTop_toBottomOf="@+id/image_view_Login"
         style="@style/RoundedEditText"/>
 
+
+
     <EditText
         android:id="@+id/EDT2"
         android:layout_width="250dp"
@@ -42,12 +44,14 @@
         android:layout_marginTop="20dp"
         android:padding="10dp"
         style="@style/RoundedEditText"
-        android:text="Contraseña"
+        android:hint="Contraseña"
+        android:text=""
         android:textColor="@color/Text_Color"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
+        android:inputType="textPassword"
         app:layout_constraintTop_toBottomOf="@+id/EDT1" />
 
 
@@ -55,7 +59,7 @@
         android:id="@+id/Btn1_Login"
         android:layout_width="250dp"
         android:layout_height="51dp"
-       android:layout_marginTop="20dp"
+        android:layout_marginTop="24dp"
         android:backgroundTint="@color/ButtonAccion_Color"
         android:text="Iniciar Sesión"
         android:textColor="@android:color/white"
@@ -63,8 +67,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/EDT2"
-        app:layout_constraintVertical_bias="0.281" />
+        app:layout_constraintTop_toBottomOf="@+id/EDT2" />
 
     <TextView
         android:id="@+id/TXV1_OlvidasteContraseña"
@@ -72,13 +75,29 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:textColor="@color/ButtonAccion_Color"
-        android:text="¿Olvidaste tu Contraseña?"
+        android:text=""
         android:textSize="17dp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/Btn1_Login" />
+
+
+    <Button
+        android:id="@+id/btnContrasena"
+        android:layout_width="wrap_content"
+        android:layout_height="51dp"
+        android:layout_marginTop="132dp"
+        android:backgroundTint="@color/white"
+        android:text="¿Olvidaste tu contraseña?"
+        android:textColor="@color/ButtonAccion_Color"
+        android:textSize="18dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.536"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/EDT2" />
 
     <TextView
         android:id="@+id/TXV2_Lineas"
@@ -101,35 +120,34 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+
     <TextView
         android:id="@+id/TXV3_NoCuenta"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="44dp"
+        android:layout_marginBottom="128dp"
         android:text="¿No tienes una cuenta?"
-        android:textSize="18dp"
         android:textColor="@color/Text_Color"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.244"
-        app:layout_constraintStart_toStartOf="parent" />
-
-
-
-    <TextView
-        android:id="@+id/TXV4_Registrate"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="44dp"
-        android:text="Regístrate"
-        android:textColor="@color/ButtonAccion_Color"
         android:textSize="17dp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.868"
-        app:layout_constraintStart_toStartOf="@id/TXV3_NoCuenta" />
+        app:layout_constraintHorizontal_bias="0.515"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/btnRegistro"
+        android:layout_width="135dp"
+        android:layout_height="51dp"
+        android:layout_marginTop="428dp"
+        android:backgroundTint="@color/white"
+        android:text="Regístrate"
+        android:textColor="@color/ButtonAccion_Color"
+        android:textSize="17dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/EDT2" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

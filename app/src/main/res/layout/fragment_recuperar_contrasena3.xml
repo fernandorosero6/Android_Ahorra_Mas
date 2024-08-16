@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ingreso.RecuperarContrasenaFragment3">
+
+    <!-- TODO: Update blank fragment layout -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_gravity="center"
+            android:padding="5dp"
+            >
+
+
+
+            <TextView
+                android:id="@+id/TV_ContraseñaSeguridad"
+                android:layout_width="205dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="48dp"
+                android:layout_gravity="center"
+                android:text="Cambio de contraseña"
+                android:textSize="35dp"
+                android:textStyle="bold"
+                android:textColor="@color/Text_Color"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.498"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/IV_FotoPerfil" />
+
+
+            <TextView
+                android:id="@+id/TV_textoCambio"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="Asigna una nueva contraseña"
+                android:textSize="15dp"
+                android:layout_marginVertical="10dp"
+                android:textStyle="normal"
+                android:textColor="@color/Text_Color"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.498"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/IV_FotoPerfil" />
+
+
+            <EditText
+                android:id="@+id/ET_ContraseñaNueva"
+                android:layout_width="300dp"
+                android:layout_height="52dp"
+                style="@style/RoundedEditText"
+                android:layout_marginTop="15dp"
+                android:backgroundTint="@color/BackgroundText_Color"
+                android:layout_gravity="center"
+                android:text=" Contraseña Nueva"
+                android:textColor="@color/Text_Color"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.522"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/TV_NombrePerfil" />
+
+
+            <EditText
+                android:id="@+id/ET_ConfirmarContraseña"
+                android:layout_width="300dp"
+                android:layout_height="52dp"
+                style="@style/RoundedEditText"
+                android:layout_marginTop="15dp"
+                android:backgroundTint="@color/BackgroundText_Color"
+                android:layout_gravity="center"
+                android:text=" Confirmar Contraseña"
+                android:textColor="@color/Text_Color"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.522"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/TV_NombrePerfil" />
+
+
+            <Button
+                android:id="@+id/Btn_GuardarPerfil"
+                android:layout_width="wrap_content"
+                android:layout_height="58dp"
+                android:layout_gravity="center"
+                android:text="Confirmar"
+                android:layout_marginTop="40dp"
+
+                android:textSize="20dp"
+                android:backgroundTint="@color/ButtonAccion_Color"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/ET_ContraseñaSeguridad"
+                />
+
+        </LinearLayout>
+    </LinearLayout>
+
+
+</FrameLayout>

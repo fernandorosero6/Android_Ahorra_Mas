@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="200dp"
+    tools:context=".presupuesto.AlertaExitosa">
+
+
+
+
+
+
+
+            <TextView
+                android:id="@+id/TV_Alerta"
+                android:layout_width="360dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="44dp"
+                android:text="¡Tu Alerta fue programada exitosamente!"
+                android:textColor="@color/Text_Color"
+                android:textSize="30dp"
+                android:textStyle="normal" />
+
+
+</FrameLayout>

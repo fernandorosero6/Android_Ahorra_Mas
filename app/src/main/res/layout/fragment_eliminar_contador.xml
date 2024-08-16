@@ -1,0 +1,327 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".contador.EliminarContador">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="900dp"
+        android:orientation="vertical">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/Icon_colorClaro"
+            android:elevation="4dp"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+            app:titleTextColor="@android:color/black" />
+
+
+
+        <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+            android:padding="24dp"
+        >
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/contador1" />
+
+        <LinearLayout
+            android:layout_width="207dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="198dp"
+                android:layout_height="41dp"
+                android:layout_gravity="right"
+                android:text="Contadores"
+                android:textSize="35sp"
+                android:textStyle="normal"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:layout_width="196dp"
+                android:layout_height="41dp"
+                android:layout_gravity="right"
+                android:text="Contadores activos: "
+                android:textSize="18sp"
+                android:textStyle="normal"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingHorizontal="24dp"
+        android:paddingVertical="5dp"
+        >
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Contadores Activos"
+        android:textSize="30dp"
+        android:layout_marginVertical="10dp"
+        android:textStyle="normal|bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="5dp">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="41dp"
+            android:text="Contador Principal "
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+
+    </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_gravity="center">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="41dp"
+                android:text="Contador 1 "
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+
+        <ImageButton
+            android:id="@+id/btnEliminar1"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:contentDescription="Eliminar ítem"
+            android:minWidth="48dp"
+            android:minHeight="48dp"
+            android:background="@color/white"
+            app:srcCompat="@android:drawable/ic_delete" />
+
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_gravity="right"
+            android:src="@drawable/contador" />
+
+    </LinearLayout>
+            </LinearLayout>
+        <LinearLayout
+            android:layout_width="128dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/Consumo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Consumo m³ " />
+
+            <EditText
+                android:id="@+id/valorConsumo"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:hint="   55220"
+                android:inputType="number"
+                android:textSize="20dp" />
+
+            <TextView
+                android:id="@+id/Gasto"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Gasto" />
+
+            <EditText
+                android:id="@+id/valorGasto"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:hint="   55220"
+                android:inputType="number"
+                android:textSize="20dp" />
+
+        </LinearLayout>
+
+        </LinearLayout>
+
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="41dp"
+            android:text="Contadores Secundarios"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+    </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_gravity="center">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="41dp"
+                    android:text="Contador 1 "
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+
+                    <ImageButton
+                        android:id="@+id/btnEliminar2"
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:contentDescription="Eliminar ítem"
+                        android:minWidth="48dp"
+                        android:minHeight="48dp"
+                        android:background="@color/white"
+                        app:srcCompat="@android:drawable/ic_delete" />
+
+                    <ImageView
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:layout_gravity="right"
+                        android:src="@drawable/contador" />
+
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="128dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="15dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/Consumo2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Consumo m³ " />
+
+                <EditText
+                    android:id="@+id/valorConsumo2"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:hint="   55220"
+                    android:inputType="number"
+                    android:textSize="20dp" />
+
+                <TextView
+                    android:id="@+id/Gasto2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Gasto" />
+
+                <EditText
+                    android:id="@+id/valorGasto2"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:hint="   55220"
+                    android:inputType="number"
+                    android:textSize="20dp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+        <TextView
+            android:layout_width="202dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="Elimina un contador y guarda los cambios "
+            android:layout_marginVertical="35dp"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            />
+
+
+
+
+
+    </LinearLayout>
+
+
+
+    <!-- NavigationView (Menú deslizante)
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/navView"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        app:headerLayout="@layout/nav_header_menu_hamburguesa"
+        app:menu="@menu/drawer_menu"/>
+        -->
+
+</FrameLayout>

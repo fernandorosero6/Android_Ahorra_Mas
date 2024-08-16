@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".contador.EditarColorFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:orientation="vertical"
+        android:padding="5dp">
+
+
+        <TextView
+            android:id="@+id/TV_ContraseñaSeguridad"
+            android:layout_width="365dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="¿Deseas cambiar el color de tu contador?"
+            android:textColor="@color/Text_Color"
+            android:textSize="34dp"
+            android:textStyle="bold" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+
+
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_gravity="right"
+                android:src="@drawable/contador" />
+
+
+
+            <Space
+                android:layout_width="16dp"
+                android:layout_height="wrap_content" />
+
+            <Button
+                android:id="@+id/btnGuardar"
+                android:layout_width="125dp"
+                android:layout_height="55dp"
+                android:backgroundTint="@color/ButtonAccion_Color"
+                android:text="Aceptar"
+                android:textColor="#FFFFFF" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+
+</FrameLayout>
