@@ -1,24 +1,35 @@
 package com.example.ahorra
 
-import android.content.Intent
 import android.os.Bundle
-import android.util.Log
 import android.view.MenuItem
-import android.widget.Toolbar
+import android.widget.Button
 import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.GravityCompat
 import androidx.drawerlayout.widget.DrawerLayout
+import androidx.fragment.app.Fragment
+import com.example.ahorra.acercaDeNosotros.AcercaDeNosotros
+import com.example.ahorra.contador.ContadorFragment
 import com.example.ahorra.databinding.ActivityInicioBinding
-import com.google.android.material.navigation.NavigationView
+import com.example.ahorra.historial.HistorialFragment
+import com.example.ahorra.presupuesto.PresupuestoFragment
+import com.example.ahorra.reportes.Reporte_De_Danos
+import com.example.ahorra.ui.home.HomeFragment
+import com.example.myapp.perfil.PerfilFragment
 
 class InicioActivity : AppCompatActivity() {
     private lateinit var binding: ActivityInicioBinding
+
     private lateinit var drawerLayout: DrawerLayout
     private lateinit var toggle: ActionBarDrawerToggle
+    private lateinit var btnContadores: Button
+    private lateinit var btnDanos: Button
+    private lateinit var btnPresupuesto: Button
+    private lateinit var btnHistorialInicio: Button
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
         binding = ActivityInicioBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
@@ -36,83 +47,60 @@ class InicioActivity : AppCompatActivity() {
         drawerLayout.addDrawerListener(toggle)
         toggle.syncState()
 
+        // Check if we're recreating a previously destroyed instance
+        if (savedInstanceState == null) {
+            // Load the HomeFragment by default when the activity is first created
+            replaceFragment(HomeFragment())
+        }
+
         // Handle navigation item clicks
         binding.navView.setNavigationItemSelectedListener { menuItem ->
             when (menuItem.itemId) {
                 R.id.nav_perfil -> {
-                    val intent = Intent(this, PerfilActivity::class.java)
-                    startActivity(intent)
+                    replaceFragment(PerfilFragment())
                     drawerLayout.closeDrawer(GravityCompat.START)
                     true
                 }
-                R.id.nav_inicio -> {
-                    val intent = Intent(this, InicioActivity::class.java)
-                    startActivity(intent)
-                    drawerLayout.closeDrawer(GravityCompat.START)
-                    true
-                }
+
                 R.id.nav_contadores -> {
-                    val intent = Intent(this, ContadorActivity::class.java)
-                    startActivity(intent)
+                    replaceFragment(ContadorFragment())
                     drawerLayout.closeDrawer(GravityCompat.START)
                     true
                 }
+
                 R.id.nav_historial -> {
-                    val intent = Intent(this, HistorialActivity::class.java)
-                    startActivity(intent)
+                    replaceFragment(HistorialFragment())
                     drawerLayout.closeDrawer(GravityCompat.START)
                     true
                 }
+
                 R.id.nav_presupuesto -> {
+                    replaceFragment(PresupuestoFragment())
                     drawerLayout.closeDrawer(GravityCompat.START)
                     true
                 }
+
                 R.id.nav_danios -> {
-                    val intent = Intent(this, ReporteDeDanosActivity::class.java)
-                    startActivity(intent)
+                    replaceFragment(Reporte_De_Danos())
                     drawerLayout.closeDrawer(GravityCompat.START)
                     true
                 }
+
                 R.id.nav_acerca_de -> {
-                    // Handle the about us action (if any)
+                    replaceFragment(AcercaDeNosotros())
                     drawerLayout.closeDrawer(GravityCompat.START)
                     true
                 }
+
                 R.id.nav_cerrar_sesion -> {
-                    // Handle the logout action (if any)
+
                     drawerLayout.closeDrawer(GravityCompat.START)
                     true
                 }
+
                 else -> false
             }
         }
-
-        // Default selection
-        binding.navView.setCheckedItem(R.id.nav_inicio)
-
-        //cambio de activitys
-        binding.BtnHistorialInicio.setOnClickListener {
-            val intent = Intent(this, HistorialActivity::class.java)
-            startActivity(intent)
-        }
-
-        binding.BtnContadores.setOnClickListener {
-            val intent = Intent(this, ContadorActivity::class.java)
-            startActivity(intent)
-        }
-
-        binding.BtnDaOs.setOnClickListener {
-            val intent = Intent(this, ReporteDeDanosActivity::class.java)
-            startActivity(intent)
-        }
-
-        binding.BtnPresupuesto.setOnClickListener{
-            val intent = Intent(this, PresupuestoActivity::class.java)
-            startActivity(intent)
-        }
-
-
-
 
     }
 
@@ -129,5 +117,12 @@ class InicioActivity : AppCompatActivity() {
         } else {
             super.onBackPressed()
         }
+    }
+
+    private fun replaceFragment(fragment: Fragment) {
+        supportFragmentManager.beginTransaction()
+            .replace(R.id.fragment_container, fragment)
+            .addToBackStack(null) // Opcional: añade a la pila de retroceso
+            .commit()
     }
 }
