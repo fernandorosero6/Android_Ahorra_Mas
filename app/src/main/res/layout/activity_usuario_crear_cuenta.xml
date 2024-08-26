@@ -5,9 +5,8 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".RegistroActivity"
+    tools:context="com.example.crud.RegistroActivity"
     android:background="@color/white">
-
 
     <TextView
         android:id="@+id/TXV_CreaTuCuenta"
@@ -139,4 +138,15 @@
         app:layout_constraintTop_toBottomOf="@id/btnRegister"
         app:layout_constraintVertical_bias="0.388" />
 
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvUsuarios"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_margin="5dp"
+        android:padding="10dp"
+        tools:listitem="@layout/item_rv_usuario"
+        tools:ignore="MissingConstraints" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
+

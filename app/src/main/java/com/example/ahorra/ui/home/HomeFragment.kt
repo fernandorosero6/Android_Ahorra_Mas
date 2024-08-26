@@ -8,7 +8,7 @@ import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import com.example.ahorra.R
-import com.example.ahorra.contador.ContadorFragment
+import com.example.contador.ContadorFragment
 import com.example.ahorra.databinding.FragmentHomeBinding
 import com.example.ahorra.historial.HistorialFragment
 import com.example.ahorra.presupuesto.PresupuestoFragment

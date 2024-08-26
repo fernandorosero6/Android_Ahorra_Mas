@@ -2,30 +2,26 @@ package com.example.ahorra
 
 import android.os.Bundle
 import android.view.MenuItem
-import android.widget.Button
 import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.GravityCompat
 import androidx.drawerlayout.widget.DrawerLayout
 import androidx.fragment.app.Fragment
 import com.example.ahorra.acercaDeNosotros.AcercaDeNosotros
-import com.example.ahorra.contador.ContadorFragment
+import com.example.contador.ContadorFragment
 import com.example.ahorra.databinding.ActivityInicioBinding
 import com.example.ahorra.historial.HistorialFragment
+import com.example.ahorra.perfil.PerfilFragment
 import com.example.ahorra.presupuesto.PresupuestoFragment
 import com.example.ahorra.reportes.Reporte_De_Danos
 import com.example.ahorra.ui.home.HomeFragment
-import com.example.myapp.perfil.PerfilFragment
 
 class InicioActivity : AppCompatActivity() {
     private lateinit var binding: ActivityInicioBinding
 
     private lateinit var drawerLayout: DrawerLayout
     private lateinit var toggle: ActionBarDrawerToggle
-    private lateinit var btnContadores: Button
-    private lateinit var btnDanos: Button
-    private lateinit var btnPresupuesto: Button
-    private lateinit var btnHistorialInicio: Button
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

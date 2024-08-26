@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".contador.EditarColorFragment">
+    tools:context="com.example.contador.EditarColorFragment">
 
     <LinearLayout
         android:layout_width="match_parent"

@@ -2,29 +2,24 @@ package com.example.ahorra
 
 import android.content.Intent
 import android.os.Bundle
+import android.os.Handler
 import androidx.activity.ComponentActivity
 import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
-
-
-
         val screenSplash = installSplashScreen()
 
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        //Splash screeen
-
-
-
-        screenSplash.setKeepOnScreenCondition{true}
-        val intent = Intent(this, LoginActivity::class.java)
-        startActivity(intent)
-        finish()
-
-      //  val apiService = RetrofitClient.apiService
+        // Mostrar el splash screen durante 2 segundos
+        Handler().postDelayed({
+            val intent = Intent(this, LoginActivity::class.java)
+            startActivity(intent)
+            finish()
+        }, 2000)}}
+//  val apiService = RetrofitClient.apiService
 
         // Obtener usuario por ID
         // apiService.getUserById(1).enqueue(object : Callback<User> {
@@ -57,7 +52,7 @@ class MainActivity : ComponentActivity() {
                 // Manejo de errores
          //   }
         //})
-    }
+
 
 
 
@@ -82,7 +77,7 @@ class MainActivity : ComponentActivity() {
 
 
 
-    }
+
 //}
 
 

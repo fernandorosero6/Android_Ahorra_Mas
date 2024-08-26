@@ -8,7 +8,7 @@
         android:fullBackupContent="@xml/backup_rules"
         android:icon="@drawable/logo"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
+
         android:supportsRtl="true"
         android:theme="@style/Theme.Ahorra"
         tools:targetApi="31"
@@ -19,7 +19,12 @@
         <activity
             android:name=".pantalla2_acercadenosotros"
             android:exported="false" />
-
+        <activity
+            android:name="com.example.crud.EditarActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.example.crud.RegistroActivity"
+            android:exported="false" />
         <activity
             android:name=".ContrasenaSeguridadActiviy"
             android:exported="false" />
@@ -31,7 +36,7 @@
             android:name=".DatosPersonalesActivity"
             android:exported="false" />
 
-        <activity android:name=".contador.ContadorFragment" />
+        <activity android:name="com.example.contador.ContadorFragment" />
         <activity
             android:name=".MenuHamburguesa"
             android:exported="false"
@@ -51,7 +56,7 @@
             android:exported="false" />
         <activity android:name=".historial.HistorialFragment" />
         <activity
-            android:name=".contador.EliminarContador"
+            android:name="com.example.contador.EliminarContador"
             android:exported="false" />
 
         <!--
@@ -71,9 +76,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity
-            android:name=".RegistroActivity"
-            android:exported="false" />
+
         <activity
             android:name=".InicioActivity"
             android:exported="false" />

@@ -1,4 +1,3 @@
-
 import com.example.ahorra.Responses.Asunto
 import retrofit2.Call
 import retrofit2.Retrofit
@@ -9,8 +8,7 @@ import retrofit2.http.GET
 import retrofit2.http.POST
 import retrofit2.http.PUT
 
-private const val BASE_URL =
-    " https://miaplicacion.com/api/"
+private const val BASE_URL = "https://f2cb-181-63-51-244.ngrok-free.app"
 
 private val retrofit = Retrofit.Builder()
     .addConverterFactory(ScalarsConverterFactory.create())
@@ -19,47 +17,42 @@ private val retrofit = Retrofit.Builder()
 
 interface RetrofitApiService {
     @GET("register")
-    fun getProperties():
-            Call<String>
+    fun getProperties(): Call<String>
 
     @FormUrlEncoded
     @POST("login")
-    fun postRegProperties(@Field("CoD") CoD: String,
-                      @Field("password") password: String):
-            Call<String>
-
+    fun postRegProperties(@Field("CoD") CoD: String, @Field("password") password: String): Call<String>
 
     @FormUrlEncoded
     @POST("register")
     fun postProperties(@Field("name") name: String,
                        @Field("lastName") lastName: String,
-                       @Field("identification") identification : String,
+                       @Field("identification") identification: String,
                        @Field("email") email: String,
-                       @Field("password") password: String):
-            Call<String>
+                       @Field("password") password: String): Call<String>
 
     @FormUrlEncoded
     @PUT("collectors")
-    fun putProperties(@Field("id") id: String,
-                      @Field("name") name: String,
-                      @Field("telephone") telephone: String,
-                      @Field("email") email: String):
-            Call<String>
-
+    fun putProperties(
+        @Field("id") id: String,
+        @Field("name") name: String,
+        @Field("telephone") telephone: String,
+        @Field("email") email: String,
+        s: String
+    ): Call<String>
 
     @FormUrlEncoded
     @POST("asunto")
-    fun postProperties(@Field("id") name: String,
-                       @Field("nombre") lastName: String,
-                       @Field("descripcion") identification : String):
+    fun postAsunto(@Field("id") id: String,
+                   @Field("nombre") nombre: String,
+                   @Field("descripcion") descripcion: String): Call<String>
 
-            Call<String>
-
-    abstract fun createAsunto(asunto: Asunto): Any
-
+    abstract fun createAsunto(asunto: Asunto): Call<Asunto>
+    abstract fun putProperties(id: String, name: String, telephone: String, email: String): Call<String>
 }
 
 object RetrofitApi {
-    val retrofitService : RetrofitApiService by lazy {
-        retrofit.create(RetrofitApiService::class.java) }
+    val retrofitService: RetrofitApiService by lazy {
+        retrofit.create(RetrofitApiService::class.java)
+    }
 }

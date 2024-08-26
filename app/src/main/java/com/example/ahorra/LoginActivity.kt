@@ -8,6 +8,8 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.example.ahorra.databinding.ActivityLoginBinding
 import com.example.ahorra.ingreso.RecuperarContrasenaFragment1
+import com.example.ahorra.singleton.RetrofitBroker
+import com.example.crud.RegistroActivity
 
 class LoginActivity : AppCompatActivity() {
 
@@ -43,16 +45,14 @@ class LoginActivity : AppCompatActivity() {
     }
 
     private fun Contrasenafunction() {
-        // Usa ViewBinding o DataBinding si es necesario
         val binding: ActivityLoginBinding = ActivityLoginBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        // Maneja el fragmento
         val fragmentManager = supportFragmentManager
         val fragmentTransaction = fragmentManager.beginTransaction()
 
         val fragment = RecuperarContrasenaFragment1()
-        fragmentTransaction.replace(R.id.main, fragment) // Usa replace en lugar de add si quieres reemplazar el fragmento actual
+        fragmentTransaction.replace(R.id.main, fragment)
         fragmentTransaction.addToBackStack(null)
         fragmentTransaction.commit()
     }
@@ -62,18 +62,25 @@ class LoginActivity : AppCompatActivity() {
     }
 
     private fun loginFunction() {
-        // Obtén los datos de los campos
         val email = edtCoD.text.toString().trim()
         val password = edtPassword.text.toString().trim()
 
-        // Valida que los campos no estén vacíos
         if (email.isEmpty() || password.isEmpty()) {
             Toast.makeText(this, "Por favor, ingresa tu correo y contraseña", Toast.LENGTH_SHORT).show()
             return
         }
 
-        // Si los campos están completos, continúa con el proceso de inicio de sesión
-        startActivity(Intent(this, InicioActivity::class.java))
-        finish() // Cierra LoginActivity para evitar volver a ella con el botón "Atrás"
+        // Prepara los datos para Retrofit
+       /* val credentials = mapOf("email" to email, "password" to password)
+
+        RetrofitBroker.putRequest(credentials, { response ->
+            // Maneja la respuesta exitosa
+            Toast.makeText(this, "Inicio de sesión exitoso", Toast.LENGTH_SHORT).show()
+            startActivity(Intent(this, InicioActivity::class.java))
+            finish()
+        }, { error ->
+            // Maneja el error
+            Toast.makeText(this, "Error: $error", Toast.LENGTH_SHORT).show()
+        })*/
     }
 }

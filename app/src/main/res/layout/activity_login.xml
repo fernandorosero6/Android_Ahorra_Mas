@@ -139,7 +139,6 @@
         android:id="@+id/btnRegistro"
         android:layout_width="135dp"
         android:layout_height="51dp"
-        android:layout_marginTop="428dp"
         android:backgroundTint="@color/white"
         android:text="Regístrate"
         android:textColor="@color/ButtonAccion_Color"
@@ -147,7 +146,7 @@
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/EDT2" />
+        app:layout_constraintTop_toBottomOf="@+id/image_google" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
