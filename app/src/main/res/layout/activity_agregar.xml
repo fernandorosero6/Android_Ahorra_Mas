@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal"
+    tools:context="com.example.crud.AgregarContador">
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="847dp"
+        android:orientation="vertical">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/Icon_colorClaro"
+            android:elevation="4dp"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+            app:titleTextColor="@android:color/black" />
+
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingHorizontal="30dp"
+            android:paddingVertical="10dp"
+            tools:ignore="MissingConstraints">
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:src="@drawable/contador1" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="232dp"
+                    android:layout_height="41dp"
+                    android:layout_gravity="right"
+                    android:text="Contadores"
+                    android:textSize="35sp"
+                    android:textStyle="normal"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:layout_width="231dp"
+                    android:layout_height="41dp"
+                    android:layout_gravity="right"
+
+                    android:text="Contadores activos: "
+                    android:textSize="18sp"
+                    android:textStyle="normal"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="41dp"
+            android:layout_gravity="center"
+            android:text="Agregar contador"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.179" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="24dp"
+            android:gravity="center"
+            android:orientation="vertical"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteX="48dp"
+            tools:layout_editor_absoluteY="166dp">
+
+            <EditText
+                android:id="@+id/etNombre"
+                android:layout_width="257dp"
+                android:layout_height="48dp"
+                android:hint="Nombre de contador"
+                android:text="" />
+
+            <EditText
+                android:id="@+id/etNumero"
+                android:layout_width="257dp"
+                android:layout_height="wrap_content"
+                android:hint="Número de contador"
+                android:text=""
+                android:inputType="number"
+                android:textSize="20dp" />
+
+            <EditText
+                android:id="@+id/etBarrio"
+                android:layout_width="257dp"
+                android:layout_height="wrap_content"
+                android:hint="Barrio"
+                android:text=""
+                android:textSize="20dp" />
+
+            <EditText
+                android:id="@+id/etDireccion"
+                android:layout_width="257dp"
+                android:layout_height="wrap_content"
+                android:hint="Dirección"
+                android:text=""
+                android:textSize="20dp" />
+
+
+
+
+            <EditText
+                android:id="@+id/etTarifaAgua"
+                android:layout_width="257dp"
+                android:layout_height="wrap_content"
+                android:hint="Tarifa agua"
+                android:text=""
+                android:inputType="number"
+                android:textSize="20dp" />
+
+            <EditText
+                android:id="@+id/etTarifaAlcantarillado"
+                android:layout_width="257dp"
+                android:layout_height="wrap_content"
+                android:hint="Tarifa de alcantarillado"
+                android:text=""
+                android:inputType="number"
+                android:textSize="20dp" />
+
+            <EditText
+                android:id="@+id/etUltimoConsumo"
+                android:layout_width="257dp"
+                android:layout_height="wrap_content"
+                android:hint="Último consumo"
+                android:text=""
+                android:inputType="number"
+                android:textSize="20dp" />
+
+            <EditText
+                android:id="@+id/etProximoPago"
+                android:layout_width="257dp"
+                android:layout_height="48dp"
+                android:drawableEnd="@drawable/calendar"
+                android:focusable="false"
+                android:hint="Próximo pago"
+                android:text=""
+                 />
+
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btnContinuar"
+            android:layout_width="125dp"
+            android:layout_height="55dp"
+            android:layout_gravity="center_horizontal"
+            android:backgroundTint="@color/ButtonAccion_Color"
+            android:text="Guardar"
+            android:textColor="#FFFFFF"
+            tools:layout_editor_absoluteX="116dp"
+            tools:layout_editor_absoluteY="613dp"
+            tools:ignore="MissingConstraints" />
+
+
+    </LinearLayout>
+
+
+
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvContadores"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_margin="5dp"
+        android:padding="10dp"
+        tools:listitem="@layout/item_rv_contador"
+        tools:ignore="MissingConstraints" />
+
+
+</LinearLayout>

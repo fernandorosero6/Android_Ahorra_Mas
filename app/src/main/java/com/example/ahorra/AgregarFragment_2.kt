@@ -1,4 +1,4 @@
-package com.example.contador
+package com.example.ahorra
 
 import android.os.Bundle
 import android.view.LayoutInflater

@@ -2,17 +2,25 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
         android:icon="@drawable/logo"
         android:label="@string/app_name"
-
         android:supportsRtl="true"
         android:theme="@style/Theme.Ahorra"
-        tools:targetApi="31"
-        android:usesCleartextTraffic="true">
+        android:usesCleartextTraffic="true"
+        tools:targetApi="31">
+        <activity
+            android:name="com.example.crud.EditarContador"
+            android:exported="false" />
+        <activity
+            android:name="com.example.crud.AgregarContador"
+            android:exported="false" />
+
         <activity
             android:name=".enviarPregunta_acercadenosotros"
             android:exported="false" />
@@ -32,11 +40,7 @@
             android:name=".SeguridadActivity"
             android:exported="false"
             android:theme="@style/Theme.Ahorra" />
-        <activity
-            android:name=".DatosPersonalesActivity"
-            android:exported="false" />
 
-        <activity android:name="com.example.contador.ContadorFragment" />
         <activity
             android:name=".MenuHamburguesa"
             android:exported="false"
@@ -55,15 +59,13 @@
             android:name=".historial.FragmentoHistorialSemanal"
             android:exported="false" />
         <activity android:name=".historial.HistorialFragment" />
-        <activity
-            android:name="com.example.contador.EliminarContador"
-            android:exported="false" />
 
         <!--
 <activity
             android:name=".ui.theme.Vizualizar_pricipal"
             android:exported="false" />
-        --><activity
+        -->
+        <activity
             android:name=".LoginActivity"
             android:exported="false" />
         <activity
@@ -76,12 +78,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
         <activity
             android:name=".InicioActivity"
             android:exported="false" />
     </application>
-
-    <uses-permission android:name="android.permission.INTERNET" />
 
 </manifest>

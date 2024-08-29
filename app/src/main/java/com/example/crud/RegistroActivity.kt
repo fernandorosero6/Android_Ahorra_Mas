@@ -38,7 +38,7 @@ class RegistroActivity : AppCompatActivity(), UsuarioAdapter.OnItemClicked {
             var isValido = validarCampos()
             if (isValido) {
                 if (!isEditando) {
-                    agregarUsuario()
+                     agregarUsuario()
                 } else {
                     actualizarUsuario()
                 }
@@ -121,7 +121,7 @@ class RegistroActivity : AppCompatActivity(), UsuarioAdapter.OnItemClicked {
 
 
         CoroutineScope(Dispatchers.IO).launch {
-            val call = RetrofitClient.webService.actualizarUsuario(usuario.idUsuario, usuario)
+            val call = RetrofitClient.webService.actualizarUsuario(usuario.correo, usuario)
             runOnUiThread {
                 if (call.isSuccessful) {
                     Toast.makeText(this@RegistroActivity, call.body().toString(), Toast.LENGTH_LONG).show()

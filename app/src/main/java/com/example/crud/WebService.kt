@@ -1,16 +1,14 @@
 package com.example.crud
 
-
 import com.google.gson.GsonBuilder
+import okhttp3.OkHttpClient
 import retrofit2.Response
 import retrofit2.Retrofit
-import okhttp3.OkHttpClient
 import retrofit2.Call
 import retrofit2.converter.gson.GsonConverterFactory
 import retrofit2.http.Body
 import retrofit2.http.DELETE
 import retrofit2.http.Field
-import retrofit2.http.FieldMap
 import retrofit2.http.FormUrlEncoded
 import retrofit2.http.GET
 import retrofit2.http.POST
@@ -23,6 +21,7 @@ object AppConstantes {
 
 interface WebService {
 
+    // Usuarios
     @GET("/usuarios")
     suspend fun obtenerUsuarios(): Response<UsuariosResponse>
 
@@ -38,43 +37,48 @@ interface WebService {
 
     @PUT("/usuario/update/{idUsuario}")
     suspend fun actualizarUsuario(
-        @Path("id") idUsuario: Int,
+        @Path("idUsuario") idUsuario: String,
         @Body usuario: Usuario
     ): Response<String>
+
     @FormUrlEncoded
-    @POST("login")
+    @POST("/login")
     fun login(
         @Field("email") email: String,
-        @Field("password") password: String): Call<String>
+        @Field("password") password: String
+    ): Call<String>
 
+    // Contadores
+    @GET("/contadores")
+    suspend fun obtenerContadores(): Response<ContadoresResponse>
 
+    @GET("/contador/{idContador}")
+    suspend fun obtenerContador(
+        @Path("idContador") idContador: Int
+    ): Response<Contador>
 
-    interface WebService {
-        @GET("/usuario/{idUsuario}")
-        suspend fun obtenerUsuario(@Path("idUsuario") idUsuario: Int): Response<Usuario>
+    @POST("/contador/add")
+    suspend fun agregarContador(
+        @Body contador: Contador
+    ): Response<String>
 
-        // Otros métodos que puedas tener
-    }
-
-
-
-
-
+    @PUT("/contador/update/{idContador}")
+    suspend fun actualizarContador(
+        @Path("idContador") idContador: String,
+        @Body contador: Contador
+    ): Response<String>
 
     @DELETE("/usuario/delete/{idUsuario}")
     suspend fun borrarUsuario(
         @Path("idUsuario") idUsuario: Int
     ): Response<String>
+
+    @DELETE("/contador/delete/{idContador}")
+    suspend fun borrarContador(
+        @Path("idContador") idContador: Int
+    ): Response<String>
 }
 
-/*object RetrofitClient {
-    val webService: WebService by lazy {
-        Retrofit.Builder()
-            .baseUrl(AppConstantes.BASE_URL)
-            .addConverterFactory(GsonConverterFactory.create(GsonBuilder().create()))
-            .build().create(WebService::class.java)
-    }
-}*/
 object RetrofitClient {
 
     private var authToken: String = "" // Token inicial vacío

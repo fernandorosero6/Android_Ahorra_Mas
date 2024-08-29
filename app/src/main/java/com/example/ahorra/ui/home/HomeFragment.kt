@@ -1,5 +1,6 @@
 package com.example.ahorra.ui.home
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -8,11 +9,11 @@ import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import com.example.ahorra.R
-import com.example.contador.ContadorFragment
 import com.example.ahorra.databinding.FragmentHomeBinding
 import com.example.ahorra.historial.HistorialFragment
 import com.example.ahorra.presupuesto.PresupuestoFragment
 import com.example.ahorra.reportes.Reporte_De_Danos
+import com.example.crud.EditarContador
 
 class HomeFragment : Fragment() {
 
@@ -38,7 +39,9 @@ class HomeFragment : Fragment() {
         }
 
         binding.BtnContadores.setOnClickListener {
-            replaceFragment(ContadorFragment())
+            // Usa el contexto de la actividad que aloja el fragmento
+            startActivity(Intent(requireActivity(), EditarContador::class.java))
+
         }
 
         binding.BtnPresupuesto.setOnClickListener {

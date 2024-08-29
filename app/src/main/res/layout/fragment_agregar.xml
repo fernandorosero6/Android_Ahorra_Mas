@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context="com.example.contador.AgregarFragment"
+    tools:context="com.example.crud.AgregarContador"
     android:background="@color/white">
 
 
@@ -98,6 +98,13 @@
         tools:layout_editor_absoluteX="48dp"
         tools:layout_editor_absoluteY="166dp">
 
+        <EditText
+            android:id="@+id/nombreContador"
+            android:layout_width="257dp"
+            android:layout_height="48dp"
+            android:hint="Nombre de contador"
+            android:text=""
+            android:inputType="number" />
 
         <EditText
             android:id="@+id/numeroContador"
@@ -125,20 +132,7 @@
             android:textSize="20dp" />
 
 
-        <Spinner
-            android:id="@+id/spinnerEstrato"
-            android:layout_width="257dp"
-            android:layout_height="48dp"
-            android:text="Estrato"
 
-
-            />
-
-        <Spinner
-            android:id="@+id/spinnerCategoría"
-            android:layout_width="257dp"
-            android:layout_height="48dp"
-            android:text="Categoría" />
 
         <EditText
             android:id="@+id/tarifaAgua"
@@ -185,8 +179,8 @@
         android:layout_width="125dp"
         android:layout_height="55dp"
         android:layout_gravity="center_horizontal"
-        android:backgroundTint="@color/ButtonAzul"
-        android:text="Continuar"
+        android:backgroundTint="@color/ButtonAccion_Color"
+        android:text="Guardar"
         android:textColor="#FFFFFF"
         tools:layout_editor_absoluteX="116dp"
         tools:layout_editor_absoluteY="613dp"
@@ -195,14 +189,6 @@
 
 </LinearLayout>
 
-    <!-- NavigationView (Menú deslizante)
-    <com.google.android.material.navigation.NavigationView
-        android:id="@+id/navView"
-        android:layout_width="wrap_content"
-        android:layout_height="match_parent"
-        android:layout_gravity="start"
-        app:headerLayout="@layout/nav_header_menu_hamburguesa"
-        app:menu="@menu/drawer_menu"/>
-        -->
+
 
     </FrameLayout>

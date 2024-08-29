@@ -1,5 +1,6 @@
 package com.example.ahorra
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.MenuItem
 import androidx.appcompat.app.ActionBarDrawerToggle
@@ -8,20 +9,18 @@ import androidx.core.view.GravityCompat
 import androidx.drawerlayout.widget.DrawerLayout
 import androidx.fragment.app.Fragment
 import com.example.ahorra.acercaDeNosotros.AcercaDeNosotros
-import com.example.contador.ContadorFragment
 import com.example.ahorra.databinding.ActivityInicioBinding
 import com.example.ahorra.historial.HistorialFragment
 import com.example.ahorra.perfil.PerfilFragment
 import com.example.ahorra.presupuesto.PresupuestoFragment
 import com.example.ahorra.reportes.Reporte_De_Danos
 import com.example.ahorra.ui.home.HomeFragment
+import com.example.crud.EditarContador
 
 class InicioActivity : AppCompatActivity() {
     private lateinit var binding: ActivityInicioBinding
-
     private lateinit var drawerLayout: DrawerLayout
     private lateinit var toggle: ActionBarDrawerToggle
-
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -59,7 +58,8 @@ class InicioActivity : AppCompatActivity() {
                 }
 
                 R.id.nav_contadores -> {
-                    replaceFragment(ContadorFragment())
+                    // Aquí se reemplaza el fragmento por un Intent para iniciar la nueva Activity
+                    startActivity(Intent(this, EditarContador::class.java))
                     drawerLayout.closeDrawer(GravityCompat.START)
                     true
                 }
@@ -89,7 +89,7 @@ class InicioActivity : AppCompatActivity() {
                 }
 
                 R.id.nav_cerrar_sesion -> {
-
+                    // Aquí puedes agregar la lógica para cerrar sesión si es necesario
                     drawerLayout.closeDrawer(GravityCompat.START)
                     true
                 }
@@ -97,14 +97,14 @@ class InicioActivity : AppCompatActivity() {
                 else -> false
             }
         }
-
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        if (toggle.onOptionsItemSelected(item)) {
-            return true
+        return if (toggle.onOptionsItemSelected(item)) {
+            true
+        } else {
+            super.onOptionsItemSelected(item)
         }
-        return super.onOptionsItemSelected(item)
     }
 
     override fun onBackPressed() {

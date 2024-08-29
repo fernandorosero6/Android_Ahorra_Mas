@@ -62,18 +62,18 @@ class LoginActivity : AppCompatActivity() {
     }
 
     private fun loginFunction() {
-        val email = edtCoD.text.toString().trim()
-        val password = edtPassword.text.toString().trim()
+        val correo = edtCoD.text.toString().trim()
+        val contraseña = edtPassword.text.toString().trim()
 
-        if (email.isEmpty() || password.isEmpty()) {
+        if (correo.isEmpty() || contraseña.isEmpty()) {
             Toast.makeText(this, "Por favor, ingresa tu correo y contraseña", Toast.LENGTH_SHORT).show()
             return
         }
 
         // Prepara los datos para Retrofit
-       /* val credentials = mapOf("email" to email, "password" to password)
+        val credentials = mapOf("correo" to correo, "contraseña" to contraseña)
 
-        RetrofitBroker.putRequest(credentials, { response ->
+        RetrofitBroker.postRegProperties(credentials, { response ->
             // Maneja la respuesta exitosa
             Toast.makeText(this, "Inicio de sesión exitoso", Toast.LENGTH_SHORT).show()
             startActivity(Intent(this, InicioActivity::class.java))
@@ -81,6 +81,6 @@ class LoginActivity : AppCompatActivity() {
         }, { error ->
             // Maneja el error
             Toast.makeText(this, "Error: $error", Toast.LENGTH_SHORT).show()
-        })*/
+        })
     }
 }
